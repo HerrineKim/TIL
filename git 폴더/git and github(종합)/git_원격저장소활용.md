@@ -134,9 +134,13 @@ Date:   Wed Jan 12 16:38:47 2022 +0900
 - 해시값 관련 영상
   - How secure is 256 bit security? (유튜브)
 
+![image-20220113160415189](git_%EC%9B%90%EA%B2%A9%EC%A0%80%EC%9E%A5%EC%86%8C%ED%99%9C%EC%9A%A9.assets/image-20220113160415189.png)
+
+![image-20220113160508823](git_%EC%9B%90%EA%B2%A9%EC%A0%80%EC%9E%A5%EC%86%8C%ED%99%9C%EC%9A%A9.assets/image-20220113160508823.png)
 
 
 
+[좋은 git 커밋 메시지를 작성하기 위한 7가지 약속](https://meetup.toast.com/posts/106)
 
-
+[좋은 git commit 메시지를 위한 영어 사전](https://blog.ull.im/engineering/2019/03/10/logs-on-git.html)
 
