@@ -10,3 +10,9 @@ print(lotto_num)
 # for i in range(5):
 #     lotto_number = random.sample(numbers, 6)
 #     print(sorted(lotto_number))   
+
+def lotto_number_maker(n):
+    for i in range(n):
+        print(random.sample(range(1, 46), 6))
+
+lotto_number_maker(5)
