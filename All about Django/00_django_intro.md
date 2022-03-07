@@ -4,6 +4,18 @@
 
 ## Intro
 
+### .gitignore
+
+> git으로 프로젝트 내의 특정 파일/폴더를 관리하지 않기 위한 설정
+
+* git은 프로젝트의 모든 파일/폴더의 변경사항을 관리함. 
+* 개발시 개발 소스와 상관없는 파일/폴더(예- 운영체제, 개발환경(IDE, 에디터), 특정 프레임워크/라이브러리)를 `.gitignore`로 관리.
+  * 파이썬 예시 - [GitHub](https://github.com/github/gitignore/blob/main/Python.gitignore)
+* 이외에도 https://gitignore.io/ 사이트에서 운영체제(mac, windows), 개발환경(Pycharm, visual studio code), 특정 언어 및 환경(Python, Django, Jupyternotebook)을 입력하여 조합된 결과를 활용할 수 있다.
+  * 예시 - `django`, `visual studio code`, `windows` [링크](
+
+
+
 **설치**
 
 ```bash
@@ -62,7 +74,7 @@ $ python manage.py runserver
   - Asynchronous Server Gateway Interface
   - 장고 어플리케이션이 비동기식 웹 서버와 연결 및 소통하는 것을 도움
 - `manage.py`
-  - Django 프로젝트와 다양한 방법으로상호작용 하는 커맨드라인 유틸리티
+  - Django 프로젝트와 다양한 방법으로 상호작용 하는 커맨드라인 유틸리티
 
 
 <br>
@@ -74,6 +86,12 @@ $ python manage.py startapp articles
 ```
 
 > 일반적으로 Application명은 `복수형`으로 하는 것을 권장
+
+<br>
+
+### 기본 개발 흐름
+
+![image-20220302134411476](00_django_intro.assets/image-20220302134411476.png)
 
 <br>
 
@@ -200,6 +218,8 @@ $ python manage.py startapp articles
 
 - `views.py` 에서 만든 함수를 연결시켜준다.
 
+- Variable routing을 하는 경우 views.py에서 함수 파라미터로 받아야한다.
+
   ```python
   # firstpjt/urls.py
   
@@ -210,23 +230,35 @@ $ python manage.py startapp articles
   
   urlpatterns = [
       path('admin/', admin.site.urls),
-      path('index/', views.index),
+      # URL을 index/ 들어오면, 
+      # index 함수를 실행시킬 것이다.
+      path('index/', views.index),    
   ]
   ```
-
 
 <br>
 
 **views.py**
 
 - HTTP 요청을 수신하고 HTTP 응답을 반환하는 함수 작성
+- 함수를 정의할 때 반드시 첫번째는 `request`
+  * request 객체 정보 : https://docs.djangoproject.com/en/3.2/ref/request-response/
 - Model을 통해 요청에 맞는 필요 데이터에 접근
 - tempate에게 HTTP 응답 서식을 맡김
+- 함수 return은 `render` 함수 활용
+  * https://docs.djangoproject.com/ko/3.2/topics/http/shortcuts/#render
+  * 필수 인자
+    * request
+    * template 이름
 
 ```python
 # articles/views.py
 
+# index 함수는
+# 어떠한 작업을 하고 (아직 쓰지 않음)
+# index.html을 랜더링할 것이다.
 def index(request):
+    # 작업
     return render(request, 'index.html')
 ```
 
@@ -349,7 +381,7 @@ def index(request):
 
 <br>
 
-4. Comments
+4. Comments(주석)
 
 - `{# lorem #}`
 
@@ -360,6 +392,25 @@ def index(request):
 > https://docs.python.org/ko/3.9/library/pathlib.html#module-pathlib
 
 - 템플릿 상속은 기본적으로 코드의 재사용성에 초점을 맞춤
+
+  - 어떤 템플릿을 상속 받을지
+
+  - 템플릿의 어떤 블록에 해당하는 내용인지
+
+    ```django
+    {% extends 'base.html' %}
+    
+    {% block title %}
+    행운로또
+    {% endblock %}
+    
+    {% block content %}
+    <h1>로또 번호입니다.</h1>
+    <h2>{{ lotto }}</h2>
+    {% endblock %}
+    ```
+
+    
 
 - 템플릿 상속을 사용하면 사이트의 모든 공통 요소를 포함하고, 하위 템플릿이 재정의(override) 할 수있는 블록을 정의하는 기본 “skeleton” 템플릿을 만들 수 있음
 
@@ -432,6 +483,7 @@ def index(request):
 
 **HTML `<input>` element**
 
+- https://developer.mozilla.org/ko/docs/Web/HTML/Element/input
 - 사용자로부터 데이터를 입력 받기 위해 사용
 - `type` 속성에 따라 동작 방식이 달라짐
 - 핵심 속성
@@ -832,3 +884,17 @@ urlpatterns = [
   
   return render(request, 'pages/index.html')
   ```
+
+
+
+## 관련 문서 정리
+
+| 개념              | 링크                                                         | 비고     |
+| ----------------- | ------------------------------------------------------------ | -------- |
+| render            | https://docs.djangoproject.com/ko/3.2/topics/http/shortcuts/#render | views    |
+| request object    | https://docs.djangoproject.com/en/3.2/ref/request-response/  | views    |
+| URL               | https://docs.djangoproject.com/ko/3.2/topics/http/urls/#path-converters | url      |
+| template tag      | https://docs.djangoproject.com/en/3.2/ref/templates/builtins/ | template |
+| HTTP              | https://developer.mozilla.org/ko/docs/Web/HTTP               | HTTP     |
+| template settings | https://docs.djangoproject.com/en/4.0/ref/settings/#templates | settings |
+
