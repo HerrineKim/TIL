@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1><strong>수정하기</strong></h1>
+  <hr>
+  <form action="{% url 'movies:update' movie.pk %}" method="POST">
+    {% csrf_token %}
+    <label for="title">TITLE </label>
+    <input id="title" type="text" name="title" value="{{ movie.title }}">
+    <br>
+    <label for="audience">AUDIENCE </label>
+    <input id="audience" type="number" name="audience" value="{{ movie.audience }}">
+    <br>
+    <label for="release_date">RELEASE_DATE </label>
+    <input type="date" id="release_date" name="release_date" value="{{ movie.release_date|date:"Y-m-d"}}">
+    <p>GENRE
+      <select name = "genre">
+        <option value="{{ movie.genre }}" selected>{{ movie.genre }}</option>
+        <option value = "코미디">코미디</option>
+        <option value = "로맨스">로맨스</option>
+        <option value = "액션">액션</option>
+        <option value = "애니메이션">애니메이션</option>
+        <option value = "스릴러">스릴러</option>
+        <option value = "공포">공포</option>
+     </select>
+    </p>
+    <label for="score">SCORE </label>
+    <input id="score" type="number" name="score" value="{{ movie.score }}">
+    <br>
+    <label for="poster_url">POSTER_URL </label>
+    <input id="poster_url" type="text" name="poster_url" value="{{ movie.poster_url }}"> 
+    <br>
+    <label for="description">DESCRIPTION </label>
+    <textarea id="description" name="description">{{ movie.description }}</textarea>
+    <br>
+    <input class="btn btn-secondary" type="reset" value="초기화">
+    <input class="btn btn-success" type="submit" value="수정">
+  </form>
+  <hr>
+  <a class="btn btn-outline-dark btn-sm" href="{% url 'movies:index' %}" role="button">BACK</a>
+{% endblock body %}

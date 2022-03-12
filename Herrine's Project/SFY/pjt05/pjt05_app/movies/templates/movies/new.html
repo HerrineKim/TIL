@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <h1><strong>새 정보 등록하기</strong></h1>
+  <hr>
+  <form action="{% url 'movies:create' %}" method="POST">
+    {% csrf_token %}
+    <label for="title">TITLE </label>
+    <input id="title" type="text" name="title">
+    <br>
+    <label for="audience">AUDIENCE </label>
+    <input id="audience" min="0" type="number" name="audience" required>
+    <br>
+    <label for="release_date">RELEASE_DATE </label>
+    <input type="date" id="release_date" name="release_date" value="1895-12-28">
+    <p>GENRE
+      <select name = "genre">
+        <option value = "코미디" selected>코미디</option>
+        <option value = "로맨스">로맨스</option>
+        <option value = "액션">액션</option>
+        <option value = "애니메이션">애니메이션</option>
+        <option value = "스릴러">스릴러</option>
+        <option value = "공포">공포</option>
+     </select>
+    </p>
+    <label for="score">SCORE </label>
+    <input id="score" type="number" name="score">
+    <br>
+    <label for="poster_url">POSTER_URL </label>
+    <input id="poster_url" type="text" name="poster_url"> 
+    <br>
+    <label for="description">DESCRIPTION </label>
+    <textarea id="description" name="description"></textarea>
+    <br>
+    <br>
+    <input class="btn btn-success" type="submit" value="작성">
+  </form>
+  <br>
+  <br>
+  <hr>
+  <a class="btn btn-outline-dark btn-sm" href="{% url 'movies:index' %}" role="button">BACK</a>
+{% endblock body %}
