@@ -1,0 +1,30 @@
+/* 03_community.css */
+/* 아래에 코드를 작성해 주세요. */
+/* Pagination links */
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.li {
+  border: solid;
+  border: 2px dotted;
+  border: outset #f33;
+  border: medium dashed green;
+}
+
+.sidebar-menu li {
+  width: 200px
+} */
