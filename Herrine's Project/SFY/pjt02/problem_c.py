@@ -10,15 +10,27 @@ def ranking():
         'language': 'ko.'
     }
 
+    # response = requests.get(BASE_URL+path, params=params)
+    # data = response.json()
+    # pop_movies = sorted(data['results'], key=lambda movie:(-movie['vote_average']))
+    # movies_top5 = []
+    # for movie in pop_movies:
+    #     movies_top5.append(movie)
+    #     if len(movies_top5) >= 5:
+    #         return movies_top5
+    
     response = requests.get(BASE_URL+path, params=params)
     data = response.json()
-    pop_movies = sorted(data['results'], key=lambda movie:(-movie['vote_average']))
-    movies_top5 = []
-    for movie in pop_movies:
-        movies_top5.append(movie)
-        if len(movies_top5) >= 5:
-            return movies_top5
+    arr = data['results']
+    # pprint(arr)
+    for i in range(len(arr)-1, 0, -1):
+        for j in range(i):
+            if arr[j]['vote_average'] > arr[j+1]['vote_average']:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    
+    result = arr[:-6:-1]
 
+    return result
 
 if __name__ == '__main__':
     """

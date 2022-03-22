@@ -1,5 +1,89 @@
 # README
 
+## 01. 정보
+
+- JSON: JavaScript Object Notation. Javascript 객체 문법으로 구조화된 데이터를 표현하기 위한 문자 기반의 표준 포맷. 웹 어플리케이션에서 데이터를 전송할 때 일반적으로 사용.
+
+
+
+> 파이썬을 활용한 데이터 수집
+
+#### 정보 스크랩 1단계 - 요청
+
+- 정보가 있는 사이트 URL을 확인한다.
+
+- URL로 요청을 보낸다.
+
+  ```python
+  import requests
+  from bs4 import BeautifulSoup
+  
+  url = 'https://naver.com'
+  import requests
+  response = requests.get(url).text
+  # https://docs.python-requests.org/en/latest/user/quickstart/#make-a-request
+  # response (200) : 성공적으로 가져왔다! 
+  ```
+
+- Beautifulsoup4 활용: text -> 다른 객체로 변환
+
+- Beautifulsoup: HTML정보로 부터 원하는 데이터를 가져오기 쉽게, 비슷한 분류의 데이터별로 나누어주는(parsing) 파이썬 라이브러리 ( 보통 html정보를 가져오는 urllib.request.urlopen() 모듈과 함께 사용되곤 합니다 )
+
+  ```python
+  data = BeautifulSoup(response, 'html.parser')
+  kospi = data.select_one('#KOSPI_now')  # 선택자 복사해올 것
+  print(kospi.text)
+  
+  #<span>~</span>
+  ```
+
+- API(Application Programming Interface): 컴퓨터나 컴퓨터 프로그램 사이의 연결
+
+  - 주소로 요청을 보내면, JSON 문서로 응답
+
+    ```python
+    URL = 'https://api.agify.io'
+    params = {
+        'name' : 'michael'
+    }
+    response = requests.get(URL, params=params).json()
+    print(response.get('age'))
+    
+    # 70
+    ```
+
+
+- 요청해보기
+
+  1. URL 및 요청변수 설정
+
+     ```python
+     BASE_URL = 'http://api.themoviedb.org/3
+     path = '/movie/now_playing'
+     params = {
+         'api_key': '****'
+         'region': 'KR',
+         'language': 'ko'
+     }
+     
+     # URL로 만들어보기: http://api.themoviedb.org/3/movie/now_playing?api_key=****&region=KR&language=ko
+     ```
+
+  2. 요청 보낸 결과 저장
+
+     ```python
+     response = requests.get(BASE_URL+path, params=params)
+     ```
+
+  3. 조작
+
+     ```python
+     print(response.status_code, response.url)
+     data = response.json()
+     ```
+
+     
+
 ## Problem_a
 
 > 문제 사항

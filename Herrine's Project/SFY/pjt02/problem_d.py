@@ -1,3 +1,4 @@
+from numpy import empty
 import requests
 from pprint import pprint
 
@@ -30,9 +31,10 @@ def recommendation(title):
 
     response = requests.get(BASE_URL+path1, params=params1)
     data1 = response.json()
+    empty_list = []
     recom_list = []
     if len(data1['results']) == 0:
-        return '추천 영화 없음'
+        return empty_list
     else:
         for i in range(len(data1['results'])):
             recom_list.append(data1['results'][i]['title'])

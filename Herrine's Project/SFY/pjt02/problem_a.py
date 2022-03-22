@@ -9,6 +9,7 @@ params = {
 }
 
 response = requests.get(BASE_URL+path, params=params)
+print(response.url)
 data = response.json()
 
 def popular_count():
