@@ -1,3 +1,4 @@
+# 9489. 고대 유적
 T = int(input())
 for test_case in range(1, T + 1):
     N, M = map(int, input().split())  # N = 행  M = 열
@@ -30,3 +31,28 @@ for test_case in range(1, T + 1):
     else:
         max_result = max_cnt_col
     print(f'#{test_case} {max_result}')
+
+'''
+3
+3 3
+0 1 0
+0 1 0
+0 1 0
+3 3
+0 1 0
+1 1 1
+0 0 0
+8 8
+1 0 0 0 0 0 1 0
+1 0 1 1 1 0 1 0
+1 0 0 0 0 0 1 0
+0 0 0 1 0 0 1 0
+0 0 0 1 0 0 1 0
+0 1 1 0 0 0 1 0
+0 0 0 0 0 0 0 0
+0 0 0 0 1 1 1 1
+
+#1 3
+#2 3
+#3 6
+'''

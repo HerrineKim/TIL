@@ -17,7 +17,7 @@ def bfs(i, j, N):
             return visited[i][j] - 2  # 출발 도착 칸 제외
         for di, dj in [[0, 1], [1, 0], [0, -1], [-1, 0]]: # i, j에 인접한 칸에 대해
             ni, nj = i + dj, j + dj  # 주변 칸 좌표
-            if 0 <= ni < N and 0 <= nj < N and maze [ni][nj] != 1 and visited[ni][nj] == 0:
+            if 0 <= ni < N and 0 <= nj < N and maze[ni][nj] != 1 and visited[ni][nj] == 0:
                 queue.append((ni, nj))  # 인큐
                 visited[ni][nj] = visited[i][j] + 1
     return 0 # 도착지를 찾지 못한 경우

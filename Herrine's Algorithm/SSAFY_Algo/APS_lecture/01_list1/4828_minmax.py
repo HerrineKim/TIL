@@ -1,19 +1,19 @@
-#4828. min max
+# 4828. min max
 T = int(input())
 for x in range(1, T + 1):
 
     N = int(input())
     num_li = list(map(int, input().split()))
 
-    max = num_li[0]
-    min = num_li[0]
+    maxV = num_li[0]
+    minV = num_li[0]
     for num in num_li:
-        if max < num:
-            max = num
-        if num < min:
-            min = num
+        if maxV < num:
+            maxV = num
+        if num < minV:
+            minV = num
 
-    result = max - min
+    result = maxV - minV
 
     print(f'#{x} {result}')
 
