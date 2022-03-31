@@ -1,5 +1,3 @@
-import sys
-sys.stdin = open("u.txt", "r")
 def quickSort(a, begin, end):
     if begin < end:
         p = partition(a, begin, end)
@@ -22,10 +20,13 @@ def partition(a, begin, end):
     return R
 
 
-arr = list(map(int, input().split()))
-N = len(arr)
-quickSort(arr, 0, N - 1)
-print(arr[500000])
+T = int(input())
+for tc in range(1, T + 1):
+    N = int(input())
+    arr = list(map(int, input().split()))
+    quickSort(arr, 0, N - 1)
+    print(f'#{tc} {arr[N//2]}')
+
 
 # a = [69, 10, 30, 2, 16, 8, 31, 22]
 # quickSort(a, 0, 7)
