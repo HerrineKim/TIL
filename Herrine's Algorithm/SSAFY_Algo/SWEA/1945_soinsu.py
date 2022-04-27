@@ -5,8 +5,9 @@ for test_case in range(1, T + 1):
     numli = [2, 3, 5, 7, 11]
     for i in range(len(numli)):
         while True:
-            if N // numli[i] == 0:
+            if N % numli[i] == 0:
                 li[i] += 1
+                N /= numli[i]
             else:
                 break
     result = ' '.join(map(str, li))

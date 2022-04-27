@@ -60,6 +60,13 @@ $ git branch <브랜치 이름>
 # 특정 브랜치 삭제
 $ git branch -d <브랜치 이름> # 병합된 브랜치만 삭제 가능
 $ git branch -D <브랜치 이름> # (주의) 강제 삭제 (병합되지 않은 브랜치도 삭제 가능)
+
+# commit 내역 확인
+$ git log
+$ git log --oneline
+
+# 전체 commit 확인
+$ git log --oneline --all	
 ```
 
 <br>
