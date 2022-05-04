@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h1>DETAIL</h1>
+  <hr>
+  <div class="card border-0">
+    <div class="card-body mb-5">
+      {% comment %} img url 나타내는 법 {% endcomment %}
+      <img src="{{ movie.image.url }}" class="card-img-top" alt="...">
+      <br>
+      <br>
+      <h5 class="card-title">
+        {{ movie.title }}
+      </h5>
+      <p>Audience: {{ movie.audience }}</p>
+      <p>Release Dates: {{ movie.release_date }}</p>
+      <p>Genre: {{ movie.genre }}</p>
+      <p>Score: {{ movie.score }}</p>
+      <p class="card-text">{{ movie.description}}</p>
+      <a class="btn btn-warning btn-sm" href="{% url 'movies:update' movie.pk %}" role="button">
+        UPDATE
+      </a>
+      <br>
+      <br>
+      <form action="{% url 'movies:delete' movie.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="DELETE">
+      </form>
+    </div>
+  </div>
+  <a class="btn btn-outline-dark btn-sm" href="{% url 'movies:index' %}" role="button">
+    BACK
+  </a>
+{% endblock content %}
