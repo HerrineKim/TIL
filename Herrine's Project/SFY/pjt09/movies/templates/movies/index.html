@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Movies</h1>
+
+  <a href="{% url 'movies:recommended' %}" class="btn btn-warning">Recommendation</a>
+  <hr>
+  {% for movie in movies%}
+    <p>{{ movie.pk }}</p>
+    <a href="{% url 'movies:detail' movie.pk %}">{{ movie.title }}</a>
+    <hr>
+  {% endfor %}
+{% endblock %}

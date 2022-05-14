@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+  <h1 class="d-flex justify-content-center">DETAIL</h1>
+  <hr>
+  <div class="d-flex justify-content-center">
+    <div class="card" style="width: 32rem;">
+      <img src="{{ movie.poster_path }}" class="card-img-top" alt="Poster Image">
+      <div class="card-body ">
+        <h5 class="card-text">{{ movie.title }}</h5>
+        {% load movie_detail %}
+        <p>Genre: {{ genres|make_genre_list }}</p>
+        <p class="card-text">Popularity: {{ movie.popularity }}</p>
+        <p class="card-text">Release Dates: {{ movie.release_date }}</p>
+        <p class="card-text">Vote Count: {{ movie.vote_count }}</p>
+        <p class="card-text">Vote Average: {{ movie.vote_average }}</p>
+        <p class="card-text">{{ movie.overview }}</p>
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <a href="{% url 'movies:index' %}" class="btn btn-warning">BACK</a>
+  <br>
+  <hr>
+
+{% endblock %}

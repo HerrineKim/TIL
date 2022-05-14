@@ -6,6 +6,7 @@ for tc in range(1, T+1):
     for i in range(6):
         cnt[num % 10] += 1
         num //= 10
+
     tri = ruun = 0
     j = 0
     while j < 10:

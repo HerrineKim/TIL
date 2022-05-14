@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ person.username }}의 프로필 페이지</h1>
+  {% with followings=person.followings.all followers=person.followers.all %}
+    <div>
+      <div>
+        팔로워 : <span id="followersCountText">{{ followers|length }}</span> / 팔로우 : <span id="followingsCountText">{{ followings|length }}</span>
+      </div>
+      {% if request.user != person %}
+        <div>
+          <form action="{% url 'accounts:follow' person.pk %}" method="POST">
+            {% csrf_token %}
+            {% if request.user in followers %}
+              <button id="followButton" data-user-id="{{ person.pk }}">언팔로우</button>
+            {% else %}
+              <button id="followButton" data-user-id="{{ person.pk }}">팔로우</button>
+            {% endif %}
+          </form>
+        </div>
+      {% endif %}
+    </div>
+  {% endwith %}
+  
+{% endblock %}
+
+
+{% block script %}
+<script>
+  // 1. 선택
+  const followButton = document.querySelector('#followButton')
+  // 2. 이벤트 등록
+  followButton.addEventListener('click', function(event) {
+    event.preventDefault()
+    // 3. Axios 요청
+      // method : post 
+      // URL : /accounts/user_pk/follow/ => user의 id값은 data-* 속성으로 마크업에 추가한다!
+        //  data-user-id="{{ person.pk }}" 
+        //  event.target.dataset => {userId: 값}
+      // csrftoken! 
+    const userId = event.target.dataset.userId
+    const URL = `/accounts/${userId}/follow/`
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+    axios({
+      method: 'post',
+      url: URL, 
+      headers: {'X-CSRFToken': csrftoken}
+    })
+    .then( response => {
+      console.log(response)
+      //
+      const { isFollow, followingsCount, followersCount } = response.data
+      event.target.innerText = isFollow ? '언팔로우' : '팔로우'
+      document.querySelector('#followingsCountText').innerText = followingsCount
+      document.querySelector('#followersCountText').innerText = followersCount
+    })
+  })
+  
+</script>
+{% endblock script %}
