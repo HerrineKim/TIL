@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-
-{% block content %}
-<h1>추천 영화</h1>
-<h2>{{ movie.title }} <span class="badge bg-primary">{{movie.vote_average|floatformat}}</span></h2>
-<h3>{{movie.release_date}}</h3>
-<p>{{ movie.overview }}</p>
-<img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="">
-{% endblock content %}

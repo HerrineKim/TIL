@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}영화 추천 받기{% endblock %}
+
+{% block content %}
+<style>
+  .card-img-top {
+    width: 40%;
+    height: 40%;
+}
+</style>
+<br>
+<h1>당신을 위한 오늘의 영화</h1>
+<div class="card border-0">
+  <!-- Button trigger modal -->
+  <div class="card-body mb-5">
+    <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" class="card-img-top" alt="...">
+    <br>
+    <br>
+    <h5 class="card-title">
+      {{ movie.title }}
+      <span class="badge bg-primary">{{ movie.vote_average|floatformat }}</span>
+    </h5>
+    <h3>{{ movie.release_date }}</h3>
+    <p class="card-text">{{ movie.overview }}</p>
+    <a href="https://image.tmdb.org/{{ movie.id }}-{{ movie.original_title }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+      Primary link
+    </a>
+  </div>
+</div>
+{% endblock content %}
+
+

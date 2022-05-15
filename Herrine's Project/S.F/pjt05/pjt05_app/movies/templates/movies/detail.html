@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>DETAIL</h1>
+  <hr>
+  <img class='my-3' src={{ movie.poster_url }} alt="영화 포스터">
+  <h4>{{ movie.title }}</h4>
+  <br>
+  <p>Audience: {{ movie.audience }}</p>
+  <p>Release Dates: {{ movie.release_date }}</p>
+  <p>Genre: {{ movie.genre }}</p>
+  <p>Score: {{ movie.score }}</p>
+  <p>{{ movie.description }}</p>
+  <a class="btn btn-warning btn-sm" href="{% url 'movies:edit' movie.pk %}" role="button">
+    EDIT
+  </a>
+  <a class="btn btn-danger btn-sm" href="{% url 'movies:delete' movie.pk %}" role="button">
+    DELETE
+  </a>
+  <br>
+  <br>
+  <a class="btn btn-outline-dark btn-sm" href="{% url 'movies:mainboard' %}" role="button">
+    BACK
+  </a>
+{% endblock content %}

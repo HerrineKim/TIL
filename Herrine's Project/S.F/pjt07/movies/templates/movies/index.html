@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="d-flex justify-content-center p-2 bg-info text-light">INDEX</h1>   
+  <a href="{% url 'movies:create' %}"><button type="button" class="btn btn-primary">CREATE</button></a>  
+  <table class="table tabel-dark table-striped">
+    <thead>
+      <tr>
+        <th>작성자</th>
+        <th>제목</th>        
+      </tr>
+    </thead>
+    <tbody>     
+      {% for movie in movies  %}
+      <tr>       
+        <td>
+          <a href="{% url 'movies:detail' movie.pk %}">
+          {{movie.user}}
+          </a>
+        </td>      
+        <td>{{movie.title}}</td>        
+      </tr> 
+      {% endfor %}     
+    </tbody>
+  </table>
+  
+{% endblock content %} 
+
+{% block footer %}
+<nav class="d-flex justify-content-center" aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">이전</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">다음</a></li>
+  </ul>
+</nav>
+{% endblock footer %}
+

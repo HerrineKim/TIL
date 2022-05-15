@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .card-img-top {
+    width: 40%;
+    height: 40%;
+}
+</style>
+<h1>추천 영화</h1>
+<br>
+<div class="card border-0">
+  <!-- Button trigger modal -->
+  <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ movie.title }}
+      <span class="badge bg-primary">{{ movie.vote_average|floatformat }}</span>
+    </h5>
+    <h3>{{ movie.release_date }}</h3>
+    <p class="card-text">{{ movie.overview }}</p>
+  </div>
+</div>
+<a href="https://image.tmdb.org/{{ movie.id }}-{{ movie.original_title }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+  Primary link
+</a>
+{% endblock content %}
+
+
