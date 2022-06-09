@@ -1,0 +1,11 @@
+{
+  "indentRainbow.includedLanguages": [
+  
+  ],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "cSpell.words": [
+    "crossorigin"
+  ]
+}
