@@ -1,8 +1,6 @@
-# Today I learned...
+### Today I learned: 배운 내용을 정리합니다.
 
-Herrine's TIL
 
-## 1. 목차
 
 1. [All about Django](https://github.com/HerrineKim/TIL/tree/master/All%20about%20Django)
 
