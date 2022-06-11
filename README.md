@@ -2,9 +2,10 @@
 
 
 
-1. [All about Django](https://github.com/HerrineKim/TIL/tree/master/All%20about%20Django)
+1. [All about BE](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/All%20about%20Django)
 
-   Django 공부 내용 정리
+   - [All about Django](https://github.com/HerrineKim/TIL/tree/master/All%20about%20Django)
+     - 
 
 2. [All about Git](https://github.com/HerrineKim/TIL/tree/master/All%20about%20Git)
 
@@ -24,8 +25,14 @@
 
 6. [Daily Record](https://github.com/HerrineKim/TIL/tree/master/Daily%20Record)
 
-   매일 메모한 내용 정리
+   매일의 메모 정리
 
 7. [Herrine's Algorithm](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm)
 
-   알고리즘 코드 정리
+   PS 코드
+
+8. [Herrine's Project](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project/S.F)
+
+   개인 프로젝트 정리
+
+   - 
