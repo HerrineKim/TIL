@@ -1,3 +1,8 @@
+// 요즘 잘 사용되지 않는  class 컴포넌트이기 때문에 state 부분은 이런 것이 있다고만 알고 넘어가자.
+// state: 리액트 컴포넌트의 변경 가능한 데이터. 변경되면 렌더링이 다시 되기 때문에 이에 관련된 값만 포함해야 함. 하나의 JS 객체
+// - 직접 수정할 수 없고, setState() 함수를 이용해야 한다.
+// Life cycle
+
 import React from "react";
 
 const styles = {
