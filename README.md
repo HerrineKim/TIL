@@ -10,7 +10,7 @@
 
 
 
-### [All about FE](https://github.com/HerrineKim/TIL/tree/master/All about FE) | 프론트엔드 공부
+### [All about FE](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE) | 프론트엔드 공부
 
 - [CSS](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/CSS)
 - [JavaScript](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/Javascript)
