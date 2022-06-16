@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <!-- react DOM이 모든 element를 놓을 곳이 이곳 -->
     <div id="root"></div>
   </body>
   <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-  <script>
-    const span = React.createElement("span", { id: "sexy-span" });
-    ReactDOM.render(span, root);
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    // JSX를 사용하는 이유: 실제 HTML과 비슷해서 훨씬 보기 편하다
+    // Babel이 JSX를 브라우저가 이해할 수 있도록 JS로 번역해준다
+    const Title = (
+      <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+        Hello I'm a title
+      </h3>
+    );
+    const Button = (
+      <button
+        style={{
+          backgroundColor: "tomato",
+        }}
+        onClick={() => console.log("click")}
+      >
+        Click me
+      </button>
+    );
+    // 다음 시간에는 이 부분 코드를 바꿔볼 것
+    // const container = React.createElement("div", null, [Title, Button])
+    ReactDOM.render(container, root);
   </script>
-</html>
