@@ -1,4 +1,4 @@
-# ❤️Today I learned: 배운 내용을 정리합니다
+# ❤️Today I learned: 이런 것을 배웠습니다
 
 ### [Daily Record](https://github.com/HerrineKim/TIL/tree/master/Daily%20Record) | TIL
 
@@ -12,9 +12,9 @@
 
 ### [All about FE](https://github.com/HerrineKim/TIL/tree/master/All about FE) | 프론트엔드 공부
 
-- [CSS](https://github.com/HerrineKim/TIL/tree/master/All about FE/CSS)
-- [JavaScript](https://github.com/HerrineKim/TIL/tree/master/All about FE/Javascript)
-- [React](https://github.com/HerrineKim/TIL/tree/master/All about FE/React/[인프런]처음만나는리액트)
+- [CSS](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/CSS)
+- [JavaScript](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/Javascript)
+- [React](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/React)
 - [Vue]
 
 
@@ -48,5 +48,4 @@
 ### [All about Markdown](https://github.com/HerrineKim/TIL/tree/master/All%20about%20Markdown) | 마크다운 사용법
 
 - [마크다운 문법 총정리](https://github.com/HerrineKim/TIL/blob/master/All%20about%20Markdown/Markdown%20%EB%AC%B8%EB%B2%95%20%EC%B4%9D%EC%A0%95%EB%A6%AC.md)
-
 
