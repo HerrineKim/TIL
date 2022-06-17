@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ebe6bf8-f572-47ce-8f30-0df0261a3dc7" name="Default Changelist" comment="" />
+    <list default="true" id="5ebe6bf8-f572-47ce-8f30-0df0261a3dc7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../All about BE/Django/00_django_intro.assets/basic-django.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../All about BE/Django/00_django_intro.assets/image-20220302134411476.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../All about BE/Django/00_django_intro.assets/img_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../All about BE/Django/00_django_intro.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../All about BE/Django/01_django_template.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../All about BE/Django/02_django_urls.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../All about BE/Django/99_django_staticfiles.assets/Snipaste_2022-03-04_16-17-39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../All about BE/Django/99_django_staticfiles.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../All about FE/React/[nomadcoders]ReactJS로 영화 웹 서비스 만들기/실습/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../All about FE/React/[nomadcoders]ReactJS로 영화 웹 서비스 만들기/실습/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
