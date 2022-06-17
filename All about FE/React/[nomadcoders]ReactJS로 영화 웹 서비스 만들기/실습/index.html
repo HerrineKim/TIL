@@ -11,6 +11,7 @@
     const root = document.getElementById("root");
     // JSX를 사용하는 이유: 실제 HTML과 비슷해서 훨씬 보기 편하다
     // Babel이 JSX를 브라우저가 이해할 수 있도록 JS로 번역해준다
+
     const Title = () => (
       <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
         Hello I'm a title
@@ -27,12 +28,17 @@
         Click me
       </button>
     );
+
     // 다음 시간에는 이 부분 코드를 바꿔볼 것
     // const container = React.createElement("div", null, [Title, Button])
     const Container = (
       <div>
-        <Title /><Button />  
+        // 첫 알파벳을 대문자로 써야 jsx로 이해한다. HTML 요소라면 첫 문자를 소문자로 적어야 할 것이다.
+        <Title />
+        <Button />  
       </div>
-    );
+    )
+
     ReactDOM.render(Container, root);
   </script>
+</html>
