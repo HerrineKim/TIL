@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block title %}
+글쓰기
+{% endblock title %}
+
+{% block body %}
+{% if request.resolver_match.url_name == 'create' %}
+  <h2>글 작성</h2>
+{% else %}
+  <h2>글 수정</h2>
+{% endif %}
+
+<form method="POST">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  {% endbuttons %}
+</form>
+{% endblock body %}  
