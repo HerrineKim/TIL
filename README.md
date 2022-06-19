@@ -4,6 +4,12 @@
 
 
 
+### [All about CS] | CS 공부
+
+- [운영체제]
+
+
+
 ### [Herrine's Project](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project) | 개인 프로젝트
 
 - [SSAFY](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project/SSAFY)
