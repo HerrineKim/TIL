@@ -20,6 +20,7 @@ const styles = {
   },
 };
 
+// class 컴포넌트: 거의 사용하지 않는다
 class Notification extends React.Component {
   constructor(props) {
     super(props);
