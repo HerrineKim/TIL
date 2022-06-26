@@ -1,7 +1,5 @@
 # React + next.js + TypeScript
 
-
-
 ## 왜 React인가?
 
 React는 사용자 인터페이스를 만들기 위한 JavaScript 라이브러리이다. 국내에서는 이미 Angular나 Vue.js보다 시장 지배적인 위치를 차지했고 대부분의 개발 회사에서는 프론트엔드 개발을 위해서 React를 선택하는 분위기이기 때문에 취업을 준비하는 입장에서는 React를 하지 않을 이유가 없다고 한다.

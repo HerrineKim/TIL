@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-function ProfileCard(props) {
+function ProfileCard() {
   return (
     <Card title="Hyerin Kim" backgroundColor="#4ea04e">
       <p>안녕하세요, 혜린입니다.</p>
