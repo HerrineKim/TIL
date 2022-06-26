@@ -5,7 +5,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/abot-us">
+        <Route path="/about-us">
           <h1>Hello</h1>
         </Route>
         <Route path="/movie/:id">
