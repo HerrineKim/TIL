@@ -40,21 +40,21 @@
   - [DB intro](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/DB/DB%20intro.md)
 
 - [Django](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django)
-  - [Django intro](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Intro.md)
-  - [Django model](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Model.md)
+  - [Django Intro](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Intro.md)
+  - [Django Model](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Model.md)
   - [Django ModelForm CRUD](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/Django%20ModelFrom%20CRUD)
   - [Django ModelForm with Login](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/Django%20ModelForm%20with%20Login)
   - [Django Admin](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Admin.md)
   - [SQL with Django ORM](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/SQL%20with%20Django%20ORM.md)
   - [DRF](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/DRF.md)
-  - [DRF M대N with serializers](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/DRF%20M%EB%8C%80N%20with%20serializers)
-  - [Cross-site request forgery](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Cross-site%20request%20forgery.md)
+  - [DRF M:N with serializers](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/DRF%20M%EB%8C%80N%20with%20serializers)
+  - [Cross-site request forgery(CSRF)](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Cross-site%20request%20forgery.md)
   - [Cookie](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Cookie.md)
 
 
 ### [All about Git](https://github.com/HerrineKim/TIL/tree/master/All%20about%20Git/git%20and%20github(%EC%A2%85%ED%95%A9)) | Git 공부
 
-- [GitHub](https://github.com/HerrineKim/TIL/blob/master/All%20about%20Git/GitHub.md)
+- [GitHub 사용법](https://github.com/HerrineKim/TIL/blob/master/All%20about%20Git/GitHub.md)
 - [Git branch](https://github.com/HerrineKim/TIL/blob/master/All%20about%20Git/Git%20branch.md)
   - [Git branch merge](https://github.com/HerrineKim/TIL/blob/master/All%20about%20Git/Git%20branch%20merge.md)
 
