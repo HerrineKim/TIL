@@ -48,51 +48,51 @@
 
 ## 04-3 프로세스 상태도
 
-![image-20220625181512635](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625181512635.png)
+![image-20220625181512635](04%20Process%201.assets/image-20220625181512635.png)
 
 
 
 ## 04-4 프로세스 상태
 
-![image-20220625203533351](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625203533351.png)
+![image-20220625203533351](04%20Process%201.assets/image-20220625203533351.png)
 
 
 
 ## 04-5 Process Control Block(PCB)
 
-![image-20220625204414816](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625204414816.png)
+![image-20220625204414816](04%20Process%201.assets/image-20220625204414816.png)
 
 
 
 ## 04-5 문맥교환(Context Switch)
 
-![image-20220625205807751](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625205807751.png)
+![image-20220625205807751](04%20Process%201.assets/image-20220625205807751.png)
 
-![image-20220625211229042](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625211229042.png)
+![image-20220625211229042](04%20Process%201.assets/image-20220625211229042.png)
 
 
 
 ## 04-6 프로세스를 스케줄링하기 위한 큐
 
-![image-20220625211626972](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625211626972.png)
+![image-20220625211626972](04%20Process%201.assets/image-20220625211626972.png)
 
 
 
 ## 04-7 Ready Queue와 다양한 Device Queue
 
-![image-20220625212026079](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625212026079.png)
+![image-20220625212026079](04%20Process%201.assets/image-20220625212026079.png)
 
 
 
 ## 04-8 프로세스 스케줄링 큐의 모습
 
-![image-20220625212052894](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625212052894.png)
+![image-20220625212052894](04%20Process%201.assets/image-20220625212052894.png)
 
 
 
 ## 04-9 스케줄러(Scheduler)
 
-![image-20220625212119368](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625212119368.png)
+![image-20220625212119368](04%20Process%201.assets/image-20220625212119368.png)
 
 
 
@@ -103,7 +103,7 @@
 
 ## 04-10 프로세스의 상태
 
-![image-20220625212727093](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625212727093.png)
+![image-20220625212727093](04%20Process%201.assets/image-20220625212727093.png)
 
 - Suspended: Medium Term scheduler로 인해 쫓겨난 상태를 표현하기 위해 추가됨
 
@@ -111,7 +111,7 @@
 
 ## 04-11 프로세스 상태도
 
-![image-20220625220622828](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220625220622828.png)
+![image-20220625220622828](04%20Process%201.assets/image-20220625220622828.png)
 
 - New : 프로세스가 만들어진 상태이다. 프로세스가 생성되면 바로 Ready 단계로 가면 되는거 아닌가? 라고 생각할 수 있다. 하지만 프로세스가 만들어지면 메모리도 할당해야하고 프로세스의 정보를 담고 있는 PCB와 프로세스가 실행되면서 사용할 스택 메모리도 할당하고 초기화해줘야 한다. 그렇기 때문에 프로세스 생성에는 시간이 걸리고 New 상태에 어느 정도 머물러야 한다.
 - Ready : 실행을 하기 위해 기다리는 상태이다. 언제든지 실행할 준비가 되어있고, CPU를 할당해주면 바로 실행할 수 있는 단계이다.

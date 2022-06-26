@@ -49,7 +49,7 @@ function App() {
 
 
 
-![img](https://blog.kakaocdn.net/dn/lYahr/btrmTQv9WCh/XvrUX1av6k2sczWawNAKu0/img.png)
+![img](3_JSX.assets/img.png)
 
 
 

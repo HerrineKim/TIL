@@ -1,8 +1,8 @@
 # System Structure & Program Execution 2
 
-![image-20220624161343819](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624161343819.png)
+![image-20220624161343819](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624161343819.png)
 
-![image-20220624161817312](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624161817312.png)
+![image-20220624161817312](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624161817312.png)
 
 
 
@@ -10,21 +10,21 @@ CPU는 빠른 일꾼이다. 메모리의 instruction을 읽어서 실행한다. 
 
 다음 instruction을 하기 전에 interrupt가 있는지 확인한다. 있다면 지금 하던 작업을 잠시 멈추고 CPU 제제권이 OS에게 넘어간다. interrupt 별로 실행해야 할 일들은 커널 함수로 저장되어 있다. (interrupt vector와 처리 루틴 )
 
-![image-20220624194745314](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624194745314.png)
+![image-20220624194745314](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624194745314.png)
 
 
 
-![image-20220624195006273](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624195006273.png)
+![image-20220624195006273](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624195006273.png)
 
-![image-20220624195315944](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624195315944.png)
+![image-20220624195315944](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624195315944.png)
 
-![image-20220624200225238](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624200225238.png)
+![image-20220624200225238](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624200225238.png)
 
-![image-20220624201932864](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624201932864.png)
+![image-20220624201932864](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624201932864.png)
 
-![image-20220624202137829](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624202137829.png)
+![image-20220624202137829](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624202137829.png)
 
-![image-20220624202614936](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624202614936.png)
+![image-20220624202614936](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624202614936.png)
 
 - code: 실행 코드
 - data: 자료구조
@@ -34,12 +34,12 @@ CPU는 빠른 일꾼이다. 메모리의 instruction을 읽어서 실행한다. 
 
 
 
-![image-20220624203411159](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624203411159.png)
+![image-20220624203411159](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624203411159.png)
 
 - 운영체제가 하는 일: 자원을 효율적으로 관리
 
 
 
-![image-20220624203839373](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624203839373.png)
+![image-20220624203839373](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624203839373.png)
 
-![image-20220624203940504](C:\Users\herrine_dev\AppData\Roaming\Typora\typora-user-images\image-20220624203940504.png)
+![image-20220624203940504](03%20System%20Structure%20&%20Program%20Execution%202.assets/image-20220624203940504.png)
