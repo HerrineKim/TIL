@@ -1,4 +1,4 @@
-# :gift_heart:
+### :gift_heart:
 
 ### [Daily Record](https://github.com/HerrineKim/TIL/tree/master/Daily%20Record) | 공부하며 배운 소소한 것들
 
@@ -42,12 +42,15 @@
 - [Django](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django)
   - [Django Intro](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Intro.md)
   - [Django Model](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Model.md)
-  - [Django ModelForm CRUD](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/Django%20ModelFrom%20CRUD)
-  - [Django ModelForm with Login](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/Django%20ModelForm%20with%20Login)
+  - [Django User]
+  - [Django ModelForm]
+  - [Django ModelForm CRUD(예시 코드)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/Django%20ModelFrom%20CRUD)
+  - [Django ModelForm with Login(예시 코드)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/Django%20ModelForm%20with%20Login)
   - [Django Admin](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Admin.md)
   - [SQL with Django ORM](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/SQL%20with%20Django%20ORM.md)
   - [DRF](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/DRF.md)
-  - [DRF M:N with serializers](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/DRF%20M%EB%8C%80N%20with%20serializers)
+  - [DRF 1:N(예시 코드)]
+  - [DRF M:N with serializers(예시 코드)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/DRF%20M%EB%8C%80N%20with%20serializers)
   - [Cross-site request forgery(CSRF)](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Cross-site%20request%20forgery.md)
   - [Cookie](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Cookie.md)
 

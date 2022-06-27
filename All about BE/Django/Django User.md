@@ -1,4 +1,4 @@
-# User 관리
+# Django User
 
 ### 회원 관리
 
