@@ -91,7 +91,7 @@ ReactDOM.render(<App />, root);
 
 ### JSX만의 문법: for과 같은 표현은 쓸 수 없다.
 
-- JSX를 쓰고 있어 htmlFor로 바꾸어야 한다.
+- JSX를 쓰고 있어 htmlFor로 바꾸어야 한다. 즉, 별도의 문법이 존재한다.
 
 
 

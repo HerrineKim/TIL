@@ -127,8 +127,6 @@ https://unpkg.com/react@17.0.2/umd/react.development.js 로 변경해주세요.
 
 
 
-
-
 ### PropTypes 패키지
 
 1. 리액트는 파라미터를 잘 못 넘겨도 확인할 수 없는 문제점이 존재한다.
