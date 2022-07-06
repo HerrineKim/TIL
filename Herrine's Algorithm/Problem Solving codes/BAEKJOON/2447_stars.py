@@ -1,19 +1,18 @@
 # 2447. 별찍기
 
-def draw_stars(n):
-    if n==1:
+def draw(num):
+    if num == 1:
         return ['*']
-    Stars=draw_stars(n//3)
-    L=[]
+    
+    stars = draw(num // 3)
+    ans = []
+    for s in stars:
+        ans.append(s * 3)
+    for s in stars:
+        ans.append(s + ' ' * (num // 3) + s)
+    for s in stars:
+        ans.append(s * 3)
+    return ans
 
-    for star in Stars:
-        L.append(star*3)
-    for star in Stars:
-        L.append(star+' '*(n//3)+star)
-    for star in Stars:
-        L.append(star*3)
-
-    return L
-
-N=int(input())
-print('\n'.join(draw_stars(N)))
+N = int(input())
+print('\n'.join(draw(N)))
