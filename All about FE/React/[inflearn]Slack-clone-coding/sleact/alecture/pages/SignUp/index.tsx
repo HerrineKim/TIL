@@ -53,7 +53,7 @@ const onSubmit = useCallback(
           setSignUpSuccess(true);
         })
         .catch((error) => {
-          console.log(error.response?.data);
+          // console.log(error.response?.data);
           setSignUpError(error.response?.data?.code === 403);
         });
     }

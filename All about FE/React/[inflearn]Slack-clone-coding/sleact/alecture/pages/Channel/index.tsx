@@ -76,7 +76,7 @@ const Channel = () => {
           localStorage.setItem(`${workspace}-${channel}`, new Date().getTime().toString());
           setChat('');
           if (scrollbarRef.current) {
-            console.log('scrollToBottom!', scrollbarRef.current?.getValues());
+            // console.log('scrollToBottom!', scrollbarRef.current?.getValues());
             scrollbarRef.current.scrollToBottom();
           }
         });
@@ -105,7 +105,7 @@ const Channel = () => {
               scrollbarRef.current.getScrollHeight() <
               scrollbarRef.current.getClientHeight() + scrollbarRef.current.getScrollTop() + 150
             ) {
-              console.log('scrollToBottom!', scrollbarRef.current?.getValues());
+              // console.log('scrollToBottom!', scrollbarRef.current?.getValues());
               setTimeout(() => {
                 scrollbarRef.current?.scrollToBottom();
               }, 100);
@@ -148,17 +148,17 @@ const Channel = () => {
         // Use DataTransferItemList interface to access the file(s)
         for (let i = 0; i < e.dataTransfer.items.length; i++) {
           // If dropped items aren't files, reject them
-          console.log(e.dataTransfer.items[i]);
+          // console.log(e.dataTransfer.items[i]);
           if (e.dataTransfer.items[i].kind === 'file') {
             const file = e.dataTransfer.items[i].getAsFile();
-            console.log(e, '.... file[' + i + '].name = ' + file.name);
+            // console.log(e, '.... file[' + i + '].name = ' + file.name);
             formData.append('image', file);
           }
         }
       } else {
         // Use DataTransfer interface to access the file(s)
         for (let i = 0; i < e.dataTransfer.files.length; i++) {
-          console.log(e, '... file[' + i + '].name = ' + e.dataTransfer.files[i].name);
+          // console.log(e, '... file[' + i + '].name = ' + e.dataTransfer.files[i].name);
           formData.append('image', e.dataTransfer.files[i]);
         }
       }
@@ -172,7 +172,7 @@ const Channel = () => {
 
   const onDragOver = useCallback((e) => {
     e.preventDefault();
-    console.log(e);
+    // console.log(e);
     setDragOver(true);
   }, []);
 
