@@ -49,6 +49,7 @@ const onSubmit = useCallback(
       setSignUpSuccess(false);
       axios
         .post('/api/users', { email, nickname, password })
+        // 이 주소로 괄호 안 데이터들을 post 요청 보냄
         .then(() => {
           setSignUpSuccess(true);
         })
