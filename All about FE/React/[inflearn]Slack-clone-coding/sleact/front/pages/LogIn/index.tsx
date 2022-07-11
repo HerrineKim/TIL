@@ -8,6 +8,7 @@ import useSWR from 'swr';
 
 const LogIn = () => {
   const { data: userData, error, mutate } = useSWR('/api/users', fetcher);
+  // dedupingInterval: 서버에 요청 보낼 주기(이 외에도 많은 swr 설정이 있음)
   const [logInError, setLogInError] = useState(false);
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
