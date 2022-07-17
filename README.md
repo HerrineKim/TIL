@@ -1,6 +1,6 @@
-### :gift_heart:
+### :books: TODAY I LEARNED
 
-### [Daily Record](https://github.com/HerrineKim/TIL/tree/master/Daily%20Record) | 공부하며 배운 소소한 것들
+### [Daily Record](https://github.com/HerrineKim/TIL/tree/master/Daily%20Record) | 그날그날 배운 것들
 
 ### [All about CS](https://github.com/HerrineKim/TIL/tree/master/All%20about%20CS) | CS 공부
 
@@ -10,7 +10,7 @@
 
 ### [Herrine's Project](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project) | 개인 프로젝트
 
-- [SSAFY](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project/SSAFY)
+- [From SSAFY](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project/SSAFY)
 
 - [Toy Projects]
 
