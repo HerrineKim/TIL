@@ -1,6 +1,6 @@
-### :gift_heart:
+### :books: TODAY I LEARNED
 
-### [Daily Record](https://github.com/HerrineKim/TIL/tree/master/Daily%20Record) | 공부하며 배운 소소한 것들
+### [Daily Record](https://github.com/HerrineKim/TIL/tree/master/Daily%20Record) | 그날그날 배운 것들
 
 ### [All about CS](https://github.com/HerrineKim/TIL/tree/master/All%20about%20CS) | CS 공부
 
@@ -10,7 +10,7 @@
 
 ### [Herrine's Project](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project) | 개인 프로젝트
 
-- [SSAFY](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project/SSAFY)
+- [From SSAFY](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project/SSAFY)
 
 - [Toy Projects]
 
@@ -19,13 +19,15 @@
 - [CSS](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/CSS)
 - [JavaScript](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/Javascript)
 - [React](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/React)
-  - [[Inflearn]처음 만나는 리액트](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/React/%5Binflearn%5D%EC%B2%98%EC%9D%8C%20%EB%A7%8C%EB%82%98%EB%8A%94%20%EB%A6%AC%EC%95%A1%ED%8A%B8)
-  - [[NomadCoders]ReactJS로 영화 웹 서비스 만들기](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/React/%5Bnomadcoders%5DReactJS%EB%A1%9C%20%EC%98%81%ED%99%94%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%A7%8C%EB%93%A4%EA%B8%B0)
-  - [[Inflearn]Slack 클론 코딩](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/React/%5Binflearn%5DSlack-clone-coding)
+  - [[Inflearn]처음 만나는 리액트(완)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/React/%5Binflearn%5D%EC%B2%98%EC%9D%8C%20%EB%A7%8C%EB%82%98%EB%8A%94%20%EB%A6%AC%EC%95%A1%ED%8A%B8)
+  - [[NomadCoders]ReactJS로 영화 웹 서비스 만들기(완)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/React/%5Bnomadcoders%5DReactJS%EB%A1%9C%20%EC%98%81%ED%99%94%20%EC%9B%B9%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EB%A7%8C%EB%93%A4%EA%B8%B0)
+  - [[Inflearn]Slack 클론 코딩(완)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/React/%5Binflearn%5DSlack-clone-coding)
 
 
 - [Vue]
 - [FE-Sprint](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/FE-Sprint)
+
+
 
 ### [Herrine's Algorithm](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm) | 알고리즘 공부
 
@@ -42,13 +44,12 @@
   - 10 스택
   - 11 ASCII CODE
   - 12 재귀 함수
-  - 13 그래프(Dijkstrara, BFS, DFS)
-
+  - 13 그래프(Dijkstra, BFS, DFS)
 - [문제풀이 코드](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes)
-  - [백준](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes/BAEKJOON)
-  - [Programmers]
+  - [BOJ](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes/BAEKJOON)
   - [Code Up](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes/CodeUp)
   - [SSAFY & SWEA](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes/SSAFY)
+  - [Programmers]
 
 ### [All about Python](https://github.com/HerrineKim/TIL/tree/master/All%20about%20Python/02_python) | Python 공부
 
@@ -71,6 +72,14 @@
   - [DRF 1:N(예시 코드), DRF M:N with serializers(예시 코드)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/DRF%20M%EB%8C%80N%20with%20serializers)
   - [Cross-site request forgery(CSRF)](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Cross-site%20request%20forgery.md)
   - [Cookie](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Cookie.md)
+
+
+
+### [ETC](https://github.com/HerrineKim/TIL/tree/master/ETC) | 기타
+
+- [WebRTC](https://github.com/HerrineKim/TIL/tree/master/ETC/WebRTC)
+
+
 
 
 ### [All about Git](https://github.com/HerrineKim/TIL/tree/master/All%20about%20Git/git%20and%20github(%EC%A2%85%ED%95%A9)) | Git 공부
