@@ -45,6 +45,7 @@
   - 11 ASCII CODE
   - 12 재귀 함수
   - 13 그래프(Dijkstra, BFS, DFS)
+  - 14 힙(Heap), 우선순위 큐
 - [문제풀이 코드](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes)
   - [BOJ](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes/BAEKJOON)
   - [Code Up](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes/CodeUp)

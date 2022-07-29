@@ -287,7 +287,7 @@ URL은 **view와 template을 이어주는 역할**을 하고, 이 부분을 만�
 - 함수를 정의할 때 반드시 첫번째는 `request`
   * request 객체 정보 : https://docs.djangoproject.com/en/3.2/ref/request-response/
 - Model을 통해 요청에 맞는 필요 데이터에 접근
-- tempate에게 HTTP 응답 서식을 맡김
+- template에게 HTTP 응답 서식을 맡김
 - 함수 return은 `render` 함수 활용
   * https://docs.djangoproject.com/ko/3.2/topics/http/shortcuts/#render
   * 필수 인자
