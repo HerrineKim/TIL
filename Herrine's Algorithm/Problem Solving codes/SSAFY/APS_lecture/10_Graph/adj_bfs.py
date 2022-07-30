@@ -6,7 +6,7 @@
 
 def bfs(s, V):
     q = []  # 큐샐성
-    visited = [0] * (V + 1)  # vistied생성
+    visited = [0] * (V + 1)  # vistied 생성
     q.append(s)  # 시작점 인큐
     visited[s] = 1  # 시작점 인큐표시
     while q:
