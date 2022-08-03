@@ -1,10 +1,11 @@
 # 2108번 통계학
 # 입력
+import sys
 N = int(input())
 nums = []
 nums_dict = {}
 for _ in range(N):
-    num = int(input())
+    num = int(sys.stdin.readline().rstrip())
     nums.append(num)
     if num not in nums_dict:
         nums_dict[num] = 1
