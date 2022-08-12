@@ -1090,10 +1090,6 @@ h1 {
 
 <br>
 
-#### **STATIC_URL 확인해보기**
-
-**![Snipaste_2022-03-04_16-17-39](django_intro.assets/Snipaste_2022-03-04_16-17-39.png)**
-
 
 
 ## 관련 문서 정리

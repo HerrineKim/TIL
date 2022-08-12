@@ -29,25 +29,19 @@ from django.contrib.auth import authenticate
 user = authenticate(username='john', password='secret')
 ```
 
-![image-20220412104441773](README.assets/image-20220412104441773.png)
+
 
 ## 회원 가입 기능 구현
 
-![image-20220412112318055](README.assets/image-20220412112318055.png)
+(코드 참고)
+
+
 
 ## 로그인 기능 구현
 
-* [문서](https://docs.djangoproject.com/en/4.0/topics/auth/default/#django.contrib.auth.forms.AuthenticationForm)
-
-![image-20220412141242879](README.assets/image-20220412141242879.png)
-
-* [코드](https://github.com/django/django/blob/main/django/contrib/auth/forms.py#L174) 
-
-![image-20220412141416720](README.assets/image-20220412141416720.png)
+(코드 참고)
 
 
-
-![image-20220412141822267](README.assets/image-20220412141822267.png)
 
 ### 템플릿에서 변수 활용하기
 
@@ -87,74 +81,6 @@ If this processor is enabled, every `RequestContext` will contain these variable
 
 - `user` – An `auth.User` instance representing the currently logged-in user (or an `AnonymousUser` instance, if the client isn’t logged in).
 - `perms` – An instance of `django.contrib.auth.context_processors.PermWrapper`, representing the permissions that the currently logged-in user has.
-
-
-
-### login required
-
-* 비로그인 상태로 글쓰러가기
-
-![image-20220412144616096](README.assets/image-20220412144616096.png)
-
-* login_required
-
-![image-20220412144653639](README.assets/image-20220412144653639.png)
-
-* 로그인 페이지
-
-![image-20220412144718294](README.assets/image-20220412144718294.png)
-
-
-
-* 로그인 버튼을 누르면, 해당 URL 그대로 POST 요청
-
-![image-20220412144825144](README.assets/image-20220412144825144.png)
-
-![image-20220412145105640](README.assets/image-20220412145105640.png)
-
-* next가 있으면 next URL로 리다이렉트
-
-![image-20220412145147207](README.assets/image-20220412145147207.png)
-
-### 글 삭제 
-
-> Redirect는 무조건 GET 요청
-
-* 비로그인 상태로 글 삭제를 누르게 된다면, login_required 이후 로그인 페이지로 이동
-
-  ![image-20220412150646109](README.assets/image-20220412150646109.png)
-
-![image-20220412150627634](README.assets/image-20220412150627634.png)
-
-* 로그인 버튼을 누르면 /articles/10/delete/ 리다이렉트! (GET)
-* require_POST
-
-![image-20220412150755077](README.assets/image-20220412150755077.png)
-
-* 405 method not allowed 에러가 발생하게 된다.
-
-![image-20220412150827957](README.assets/image-20220412150827957.png)
-
-#### 정리
-
-* `login_required` 는 GET 요청 처리에서만 활용한다.
-* 다음 시간에 글 삭제는 본인만 삭제하도록 할 것임.
-
-## logout
-
-* [문서](https://docs.djangoproject.com/en/4.0/topics/auth/default/#how-to-log-a-user-out)
-
-![image-20220412153344386](README.assets/image-20220412153344386.png)
-
-
-
-
-
-
-
-
-
-
 
 
 
