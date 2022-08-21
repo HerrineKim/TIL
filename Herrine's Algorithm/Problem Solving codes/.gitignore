@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm,venv,python,windows,git
 # Edit at https://www.toptal.com/developers/gitignore?templates=pycharm,venv,python,windows,git
 
+Samsung_A_test/
+Samsung_IM_test/
+
 ### Git ###
 # Created by git for backups. To disable backups in Git:
 # $ git config --global mergetool.keepBackup false

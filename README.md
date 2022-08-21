@@ -67,7 +67,7 @@
   - [DB intro](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/DB/DB%20intro.md)
 - [Django](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django)
   - [Django Intro](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Intro.md)
-  - [Django Model](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Model.md)
+  - [Django Model](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/django%20model.md)
   - [Django User](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20User.md)
   - [Django ModelForm](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20ModelForm.md)
   - [Django ModelForm CRUD(예시 코드)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/Django%20ModelFrom%20CRUD)
