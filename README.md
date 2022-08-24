@@ -16,10 +16,11 @@
 
 ### [All about FE](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE) | 프론트엔드 공부
 
-- [HTML and CSS](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/CSS)
+- [HTML and CSS](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/HTML%20and%20CSS)
   - HTML
   - DOM
-
+  - CSS
+  
 - [JavaScript](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/Javascript)
 - TypeScript
 - [React](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE/React)
