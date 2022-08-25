@@ -1,6 +1,6 @@
 # Conditional Rendering
 
-어떤 조건에 따라 렌더링 여부가 달라지는 것.
+_어떤 조건에 따라 렌더링 여부가 달라지는 것._
 
 예)
 
@@ -19,13 +19,13 @@ function Greeting(props) {
 
 ## Inline Conditions
 
-조건문을 코드 안에 집어 넣는 것
+_조건문을 코드 안에 집어 넣는 것_
 
 
 
 ### 1. Inline If
 
-단축평가를 사용
+_단축평가를 사용_
 
 ```react
 function Mailbox(props) {

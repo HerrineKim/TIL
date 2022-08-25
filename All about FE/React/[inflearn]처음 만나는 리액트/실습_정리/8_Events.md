@@ -2,6 +2,8 @@
 
 Event: 사건
 
+Event Handler: 이벤트가 발생하면, 이벤트를 처리
+
 #### DOM의 Event
 
 ```html
@@ -12,17 +14,13 @@ Event: 사건
 
 #### React의 Event
 
-- Camel Case
+**Camel Case**
 
 ```react
 <button onClick="{activate}">
     Activate
 </button>
 ```
-
-
-
-Event Handler: 이벤트가 발생하면, 이벤트를 처리
 
 
 

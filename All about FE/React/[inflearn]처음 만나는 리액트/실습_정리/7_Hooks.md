@@ -156,7 +156,7 @@ useEffect(updateTitle)     // 4. 제목을 업데이트하기 위한 effect가 �
 
 1. useState (동적 상태 관리)
 2. useEffect (side effect 수행 -mount/unmount/update)
-3. useContext (컴포넌트를 중첩하지 않고도 전역 값 쉽게 관리)
+3. [useContext](https://itprogramming119.tistory.com/entry/React-useContext-%EC%82%AC%EC%9A%A9%EB%B2%95-%EB%B0%8F-%EC%98%88%EC%A0%9C) (컴포넌트를 중첩하지 않고도 전역 값 쉽게 관리)
 
 
 
