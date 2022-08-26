@@ -56,7 +56,7 @@
 - [문제풀이 코드](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes)
   - [BOJ](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/Problem%20Solving%20codes/BAEKJOON)
   - [Code Up](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/Problem%20Solving%20codes/CodeUp)
-  - [SSAFY & SWEA](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes/SSAFY)
+  - [SSAFY & SWEA](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/Problem%20Solving%20codes/SSAFY)
   - [Programmers]
 
 ### [All about Python](https://github.com/HerrineKim/TIL/tree/master/All%20about%20Python/02_python) | Python 공부
