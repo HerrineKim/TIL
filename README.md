@@ -10,9 +10,29 @@
 
 ### [Herrine's Project](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project) | 개인 프로젝트
 
-- [From SSAFY](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project/SSAFY)
+- [SSAFY 1학기 미니 프로젝트](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Project/SSAFY)
+  - PJT1: Python을 이용한 영화 데이터 수집
 
-- [Toy Projects]
+  - PJT2: JSON 형태의 영화 정보 조작하기
+
+  - PJT3: Bootstrap을 사용하여 영화 정보 사이트 만들기
+
+  - PJT4: Django와 Bootstrap을 사용하여 영화 추천 서비스 만들기
+
+  - PJT5: Django ORM과 Bootstrap을 사용하여 게시판 서비스 만들기
+
+  - PJT6: Django modelform을 사용하여 게시판 서비스 만들기
+
+  - PJT7: Django modelform과 Bootstrap을 사용하여 로그인이 가능한 게시판 서비스 만들기
+
+  - PJT8: DRF를 활용한 CRUD가 가능한 API 서버 만들기 
+
+  - PJT9: 알고리즘을 적용한 영화 추천/커뮤니티 서버 및 웹사이트 만들기
+
+  - PJT10: Vue2, Vuex, TMDB API, AJAX를 사용한 영화 추천 웹사이트 만들기
+
+- [토이 프로젝트]
+
 
 ### [All about FE](https://github.com/HerrineKim/TIL/tree/master/All%20about%20FE) | 프론트엔드 공부
 
@@ -37,22 +57,6 @@
 ### [Herrine's Algorithm](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm) | 알고리즘 공부
 
 - [알고리즘 개념](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B0%9C%EB%85%90)
-  - 01 정렬
-  - 02 동적 계획법(D.P.)
-  - 03 그리디 알고리즘
-  - 04 완전 탐색
-  - 05 이분 탐색
-  - 06 너비 우선 탐색, BFS
-  - 07 구간 합
-  - 08 깊이 우선 탐색, DFS
-  - 09 큐, 덱
-  - 10 스택
-  - 11 ASCII CODE
-  - 12 재귀 함수
-  - 13 그래프(Dijkstra, BFS, DFS)
-  - 14 힙(Heap), 우선순위 큐
-  - 15 분할정복
-  - 16 서로소 집합
 - [문제풀이 코드](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/PS%20codes)
   - [BOJ](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/Problem%20Solving%20codes/BAEKJOON)
   - [Code Up](https://github.com/HerrineKim/TIL/tree/master/Herrine's%20Algorithm/Problem%20Solving%20codes/CodeUp)
