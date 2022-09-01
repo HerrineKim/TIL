@@ -419,11 +419,37 @@ input, button {
 ### Box model
 
 - 모든 HTML 요소는 box 형태로 되어있다.
+
 - 하나의 박스는 네 부분(영역)으로 이루어짐
   - content
   - padding
   - border
   - margin
+  
+  
+
+#### margin의 동작
+
+- 박스와 박스 사이 간격
+
+- normal flow인 경우에는 합쳐짐: margin collapse 현상
+
+  1. normal flow인 형제 요소들끼리(의도해서 함)
+
+  2. normal flow인 부모 자식 요소들끼리(의도하지는 않았는데... 어쩌다보니 들어간 경우)
+
+- 만약 부모요소에 padding이 있으면 margin-collapse 2번 케이스는 동작하지 X
+
+
+
+#### overflow
+
+- 박스 내에서 요소가 넘치는 경우 어떻게 할 것인가?
+- `hidden`, `auto`
+
+
+
+
 
 ![image-20220814215927750](CSS%EB%9E%80.assets/image-20220814215927750.png)
 
@@ -435,17 +461,27 @@ input, button {
 
 ### box-sizing
 
-- 기본적으로 모든 요소의 box-sizing은 content-box다.
-  - padding을 제외한 순수 contents 영역만을 box로 지정한다.
-- 다만 영역을 border까지로 넓히고 싶다면 box-sizing을 border-box로 설정하면 된다. 
+- 기본적으로 모든 요소의 box-sizing은 content-box다. padding을 제외한 순수 contents 영역만을 box로 지정한다. 다만 영역을 border까지로 넓히고 싶다면 box-sizing을 border-box로 설정하면 된다. 
 
 
+
+#### 장점
+
+박스 크기 계산이 용이해진다.
+
+#### 단점
+
+잘못 쓰면 어디서는 content-box고 어디서는 border-box인 참사가 발생할 수 있다.
+
+#### 해결
+
+가급적이면 box-sizing을 쓸 때는 와일드카드 셀렉터 (*)를 사용해서 모든 요소에서 같은 box 계산 방식을 사용하는 걸 개인적으로 권장
 
 
 
 ## CSS Display
 
-> CSS 원칙 2: display에 따라 크리와 배치가 달라진다. 
+> CSS 원칙 2: display에 따라 크기와 배치가 달라진다. 
 
 ### 대표적으로 활용되는 display
 
@@ -495,22 +531,48 @@ input, button {
 ### CSS position
 
 - 문서 상에서 요소의 위치를 지정
+
 - `static`: 모든 태그의 기본 값(기준 위치)
+
+  - 박스 자체를 기준으로 하여 X, Y축을 이동
   - 일반적인 요소의 배치 순서에 따름(좌측 상단)
   - 부모 요소 내에서 배치될 때는 부모 요소의 위치를 기준으로 배치 됨
+
 - 아래는 좌표 프로퍼티(top, bottom, left, right)를 사용하여 이동 가능
   - `relative`: 상대 위치
     - 자기 자신의 static 위치를 기준으로 이동(normal flow 유지)
     - 레이아웃에서 요소가 차지하는 공간은 static 일 때와 같음(normal position 대비 offset)
   - `absolute`: 절대 위치
+    - 자신을 기준으로 하였을 때, 조상 요소 중 가장 가까운 좌표 시스템을 쓰는 요소를 기준
+    - 무조건 그 위치로 감
+    - 좌표 시스템을 쓴다 = `position` 속성 값이 `static`이 아니다
+    - 보통 `absolute` 속성값을 쓸 때는 해당 요소의 부모 요소나 조상 요소에 `position` 값을 `relative` 로 지정하여 사용
+    - `absolute` 속성은 normal flow를 탈출
+    - 얘가 어디있을 지 모르는데, 부모 요소가 이 요소의 크기를 알 수가 없다. (= 가출한 아이다)
+    - `absolute` 쓰는 상황 > 아이콘이 특정 위치에 예쁘게 있어야 한다, 특정한 위치에 레이어를 띄워야 한다.
+    - 어떻게 보면 flow를 무시하는 데 써도 되나요? (=정답: 당연히)
     - 요소를 일반적인 문서 흐름에서 제거 후 레이아웃에 공간을 차지하지 않음(normal flow에서 벗어남)
     - static이 아닌 가장 가까이 있는 부모/조상 요소를 기준으로 이동(없는 경우 body)
     - 부모요소에 relative 설정 필수
   - `fixed`: 고정 위치
     - 요소를 일반적인 문서 흐름에서 제거 후 레이아웃에 공간을 차지하지 않음(normal flow에서 벗어남)
     - 부모 요소와 관계 없이 viewport를 기준으로 이동(스크롤 시에도 항상 같은 곳에 위치함)
+    - 아주 자주 쓰인다.
+
+  - `sticky`: 비교적 최신에 나온 속성값. 특정한 요소가 특정한 조건에 맞물렸을 때에만 fixed처럼 동작해줘
 
 
+
+## 좌표
+
+- X축 (`left`, `right`)
+- Y축 (`top`, `bottom`)
+- Z축 (`z-index`)
+  - 팁: Z축 관리를 잘하십시오. 잘 못하면, 어떤 요소가 정신차려보면 어떤 요소의 위에 있어요.
+- 특정성 로직
+- 일반적인 경우 > 5씩 추가
+- 큰 레이아웃인 경우 > 100씩
+- 진짜 이건 무조건 높아야 돼 > 10000씩
 
 ## 참고
 

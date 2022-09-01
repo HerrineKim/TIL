@@ -95,6 +95,8 @@
 
 ## Flexbox
 
+- Flex & Grid만 가지고도 대부분의 레이아웃은 구성 가능
+
 ### CSS Flexible Box Layout
 
 ![image-20220824102559063](CSS%20Layout(float,%20flexbox,%20grid).assets/image-20220824102559063.png)
