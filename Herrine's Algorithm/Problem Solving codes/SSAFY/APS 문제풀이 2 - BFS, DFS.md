@@ -84,15 +84,15 @@ for test_case in range(1, T + 1):
 > BFS
 
 비상연락망과 연락을 시작하는 당번에 대한 정보가 주어질 때, 가장 나중에 연락을 받게 되는 사람 중 번호가 가장 큰 사람을 구하는 함수를 작성하시오.
- 
+
 **[예시]**
 
 아래는 비상연락망을 나타낸 그림이다.
- 
+
 
 ![img](https://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV2XakJaDe8BBASl)
 
- 
+
 각 원은 개개인을 의미하며, 원 안의 숫자는 그사람의 번호를 나타내고 빨간원은 연락을 시작하는 당번을 의미한다.
 
 화살표는 연락이 가능한 방향을 의미한다.
@@ -100,15 +100,15 @@ for test_case in range(1, T + 1):
 위의 예시에서는 7번과 1번은 서로 연락이 가능하다,
 
 하지만 2번과 7번의 경우 2번은 7번에게 연락할 수 있지만 7번은 2번에게 연락할 수 없다.
- 
+
 비상연락망이 가동되면 아래 그림과 같이 연락을 시작하는 당번인 2번은 연락 가능한 7번과 15번에 동시에 연락을 취한다 (다자 간 통화를 사용한다고 가정).
- 
+
 
 ![img](https://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV2Xan_6DfABBASl)
 
- 
+
 그 다음 아래와 같이 7번은 1번에게, 15번은 4번에게 연락을 취한다 (이 과정은 동시에 일어난다고 가정한다).
- 
+
 
 ![img](https://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV2Xat3qDfEBBASl)
 
@@ -116,7 +116,7 @@ for test_case in range(1, T + 1):
 그 다음 아래와 같이 1번은 8번과 17번에게 동시에 연락하며, 이와 동시에 4번은 10번에게 연락한다.
 
 7번과 2번의 경우는 이미 연락을 받은 상태이기 때문에 다시 연락하지 않는다.
- 
+
 
 ![img](https://swexpertacademy.com/main/common/fileDownload.do?downloadType=CKEditorImages&fileId=AV2XaywKDfIBBASl)
 
@@ -124,9 +124,9 @@ for test_case in range(1, T + 1):
 위의 모습이 연락이 끝난 마지막 모습이 되며, 마지막에 동시에 연락 받은 사람은 8번, 10번, 17번의 세 명이다.
 
 이 중에서 가장 숫자가 큰 사람은 17번이므로 17을 반환하면 된다.
- 
+
 ※ 3, 6, 11, 22번은 시간이 지나도 연락을 받지 못한다.
- 
+
 **[제약 사항]**
 
 연락 인원은 최대 100명이며, 부여될 수 있는 번호는 1이상, 100이하이다.
@@ -140,7 +140,7 @@ for test_case in range(1, T + 1):
 비상연락망 정보는 사전에 공유되며 한 번 연락을 받은 사람에게 다시 연락을 하는 일은 없다.
 
 예시에서의 3, 6, 11, 22번과 같이 연락을 받을 수 없는 사람도 존재할 수 있다.
- 
+
 **[입력]**
 
 입력의 첫 번째 줄에는 입력 받는 데이터의 길이와 시작점이 주어진다.
@@ -157,7 +157,7 @@ for test_case in range(1, T + 1):
 
 **[출력]**
 
-\#부호와 함께 테스트 케이스의 번호를 출력하고, 공백 문자 후 테스트 케이스에 대한 답을 출력한다.
+부호와 함께 테스트 케이스의 번호를 출력하고, 공백 문자 후 테스트 케이스에 대한 답을 출력한다.
 
 ```python
 def BFS(s):
