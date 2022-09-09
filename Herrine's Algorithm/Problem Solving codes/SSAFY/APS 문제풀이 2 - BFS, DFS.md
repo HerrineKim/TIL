@@ -372,43 +372,89 @@ for test_case in range(1, T + 1):
 출력해야 할 정답은 탈주범이 위치할 수 있는 장소의 개수이다.
 
 ```python
-pipe = [[0, 0, 0, 0], [1, 1, 1, 1], [1, 1, 0, 0], [0, 0, 1, 1], [1, 0, 0, 1], [0, 1, 0, 1], [0, 1, 1, 0], [1, 0, 1, 0]]  # 파이프 종류
-di, dj = (-1, 1, 0, 0), (0, 0, -1, 1)  # 사방탐색
-opp = [1, 0, 3, 2]  # 반대 방향
+import sys
+from collections import deque
+
+sys.stdin = open('input.txt', 'r')
 
 
-def BFS(N, M, si, sj, L):
-    q = []
-    v = [[0] * M for _ in range(N)]
+# 각 수마다 방향 처리
+def direction(num):
+    if num == 1:
+        return [(-1, 0), (0, 1), (1, 0), (0, -1)]  # 상 우 하 좌
+    elif num == 2:
+        return [(-1, 0), (1, 0)]  # 상 하
+    elif num == 3:
+        return [(0, -1), (0, 1)]  # 좌 우
+    elif num == 4:
+        return [(-1, 0), (0, 1)]  # 상 우
+    elif num == 5:
+        return [(1, 0), (0, 1)]  # 하 우
+    elif num == 6:
+        return [(1, 0), (0, -1)]  # 하 좌
+    elif num == 7:
+        return [(-1, 0), (0, -1)]  # 상 좌
 
-    q.append((si, sj))
-    v[si][sj] = 1
-    cnt = 1
 
-    while q:
-        ci, cj = q.pop(0)
+# 해당 방향으로 갈때 가고자 하는 터널로 갈 수 있는 지(터널 연결성 확인)
+def direction_check(dr, dc):
+    if dr == -1 and dc == 0:  # 상
+        return 1, 0  # 하
+    elif dr == 0 and dc == 1:  # 우
+        return 0, -1  # 좌
+    elif dr == 1 and dc == 0:  # 하
+        return -1, 0  # 상
+    elif dr == 0 and dc == -1:  # 좌
+        return 0, 1  # 우
 
-        if v[ci][cj] == L:  # 종료조건: 도착했을 때
-            return cnt
 
-        for k in range(4):  # 사방탐색
-            ni, nj = ci + di[k], cj + dj[k]
-            # 현 파이프의 이동 방향에 1이 있어야하고, 내가 이동할 파이프의 '반대'(opp) 방향에도 1이 있어야 함
-            if 0 <= ni < N and 0 <= nj < M and v[ni][nj] == 0 and \
-                    pipe[arr[ci][cj]][k] and pipe[arr[ni][nj]][opp[k]]:
-                q.append((ni, nj))
-                v[ni][nj] = v[ci][cj] + 1
-                cnt += 1
-    return cnt
+def bfs(r, c):
+    queue = deque([[r, c]])
+    visited[r][c] = 0
+    d = 1  # 거리재기
+    while queue:
+        # 만약 필요 거리만큼 이동했다면 bfs종료
+        if d == L:
+            return
+        # 큐에 존재하는 길이만큼만 돈다.
+        for _ in range(len(queue)):
+
+            r, c = queue.popleft()
+
+            for dr, dc in direction(tunnel[r][c]):
+                nr = r + dr
+                nc = c + dc
+
+                # 만약 범위를 벗어난다거나 이미 방문했다거나 터널이 없는 경우
+                if nr < 0 or nr >= N or nc < 0 or nc >= M or visited[nr][nc] != -1 or tunnel[nr][nc] == 0:
+                    continue
+
+                if direction_check(dr, dc) in direction(tunnel[nr][nc]):  # 터널이 연결되어 있으면
+                    visited[nr][nc] = visited[r][c] + 1  # 해당위치를 전의 위치에서 +1 해준다
+                    queue.append([nr, nc])
+
+        d += 1  # 거리 1개 추가
 
 
 T = int(input())
-for test_case in range(1, T + 1):
-    N, M, R, C, L = map(int, input().split())  # N 세로 M 가로 R 맨홀 x좌표 C 맨홀 y좌표 L 소요 시간
-    arr = [list(map(int, input().split())) for _ in range(N)]  # 2차원 배열
-    ans = BFS(N, M, R, C, L)  # 특정 시간이 경과한 후 탈주범이 위치할 수 있는 장소의 개수
-    print(f'#{test_case} {ans}')
+for tc in range(1, T + 1):
+    N, M, R, C, L = map(int, input().split())  # 세로, 가로, 맨홀세로, 맨홀가로, 소요시간
+    tunnel = []
+    visited = [[-1 for _ in range(M)] for _ in range(N)]
 
+    for _ in range(N):
+        tunnel.append(list(map(int, input().split())))
+
+    bfs(R, C)
+
+    # 개수를 센다.
+    count = 0
+    for i in range(N):
+        for j in range(M):
+            if visited[i][j] >= 0:  # 만약 해당 위치가 도둑이 갈 수 있는 거리라면
+                count += 1
+
+    print(f'#{tc} {count}')
 ```
 
 <br>
