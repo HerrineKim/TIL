@@ -1,24 +1,22 @@
-# 1865. 동철이의 일 분배
-# 5209. 최소생산비용 문제와 같이 한 줄에 하나씩만 방문해야 하는 dfs 백트래킹 문제
-def dfs(idx, ssum):
+def DFS(idx, temp):
     global res
-    if ssum <= res:
+    if temp <= res:
         return
-    if idx == N and ssum > res:
-        res = ssum
+    if idx == N and temp > res:
+        res = temp
         return
     for i in range(N):
-        if not visited[i]:
-            visited[i] = 1
-            dfs(idx + 1, ssum * arr[idx][i] * 0.01)
-            visited[i] = 0
+        if not v[i]:
+            v[i] = 1
+            DFS(idx+1, temp * arr[idx][i]/100)
+            v[i] = 0
 
 
 T = int(input())
 for tc in range(1, T + 1):
     N = int(input())
     arr = [list(map(int, input().split())) for _ in range(N)]
-    visited = [0] * N
-    res = 0 + 0 + 0  # 최소 확률로 초기화
-    dfs(0, 1)
-    print(f'#{tc} {res*100:6f}')
+    res = 0
+    v = [0] * N
+    DFS(0, 1)
+    print(f'#{tc} {res * 100:6f}')
