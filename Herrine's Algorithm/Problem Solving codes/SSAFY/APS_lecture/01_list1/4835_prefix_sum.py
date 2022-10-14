@@ -1,26 +1,26 @@
 # 4835. 구간합
 T = int(input())
-for test_case in range(1, T + 1):
-    N, M = map(int, input().split(' '))
-    samples = input().split(' ')
+for tc in range(1, T + 1):
+    N, M = map(int, input().split())
+    samples = input().split()
+    
     x = 0
-
     for i in range(M):
         x += int(samples[i])
     max_r = x
     min_r = x
-
-    for i in range(1, N - M + 1):
-        x = 0
-        for j in range(i, i + M):
-            x += int(samples[j])
-        if x > max_r:
-            max_r = x
-        if x < min_r:
-            min_r = x
-
+    
+    for j in range(1, N - M + 1):
+        temp = 0
+        for k in range(j, j + M):
+            temp += int(samples[k])
+        if temp > max_r:
+            max_r = temp
+        if temp < min_r:
+            min_r = temp
+    
     result = max_r - min_r
-    print(f"#{test_case} {result}")
+    print(f'#{tc} {result}')
 
 '''
 3
