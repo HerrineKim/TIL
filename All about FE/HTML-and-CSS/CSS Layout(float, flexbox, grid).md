@@ -210,3 +210,56 @@
   - `space-between`: 아이템 사이의 간격을 균일하게 분배
   - `space-around`: 아이템을 둘러싼 영역을 균일하게 분배(가질 수 있는 영역을 반으로 나눠서 양쪽에)
   - `space-evenly`: 전체 영역에서 아이템 간 간격을 균일하게 분배
+
+
+
+### Flex 속성 : 5. align-items
+
+- 모든 아이템을 Cross axis를 기준으로 정렬
+
+  ![image-20221015143757312](CSS%20Layout(float,%20flexbox,%20grid).assets/image-20221015143757312.png)
+
+
+
+### Flex 속성: 6. align-self
+
+- 개별 아이템을 Cross axis 기준으로 정렬
+  - :star: 주의! 해당 속성은 컨테이너에 적용하는 것이 아니라 개별 아이템에 적용
+
+
+
+#### align-items & align-self
+
+- Cross axis를 중심으로
+  - stretch (기본 값): 컨테이너를 가득 채움
+  - flex-start: 위
+  - flex-end: 아래
+  - center: 가운데
+  - baseline: 텍스트 baseline에 기준선을 맞춤
+
+
+
+### Flex에 적용하는 속성
+
+- 기타 속성
+
+  - flex-grow: 남은 영역을 아이템에 분배
+
+  - order: 배치 순서
+
+    ```html
+    <div class="flex_item grow-1 order-3">
+        1
+    </div>
+    <div class="flex_item grow-1">
+        2
+    </div>
+    <div class="flex_item order-1">
+        3
+    </div>
+    <div class="flex_item order-2">
+        4
+    </div>
+    ```
+
+    
