@@ -54,31 +54,23 @@
 ### [Back-end](https://github.com/HerrineKim/TIL/tree/master/Back-end)
 
 - [Database]()
-- [Django](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django)
-  - [Django Intro](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Intro.md)
-  - [Django Model](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/django%20model.md)
-  - [Django User](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20User.md)
-  - [Django ModelForm](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20ModelForm.md)
-  - [Django ModelForm CRUD(예시 코드)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/Django%20ModelFrom%20CRUD)
-  - [Django ModelForm with Login(예시 코드)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/Django%20ModelForm%20with%20Login)
-  - [Django Admin](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Django%20Admin.md)
-  - [SQL with Django ORM](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/SQL%20with%20Django%20ORM.md)
-  - [DRF](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/DRF.md)
-  - [DRF 1:N(예시 코드), DRF M:N with serializers(예시 코드)](https://github.com/HerrineKim/TIL/tree/master/All%20about%20BE/Django/DRF%20M%EB%8C%80N%20with%20serializers)
-  - [Cross-site request forgery(CSRF)](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Cross-site%20request%20forgery.md)
-  - [Cookie](https://github.com/HerrineKim/TIL/blob/master/All%20about%20BE/Django/Cookie.md)
+- [Django](https://github.com/HerrineKim/TIL/tree/master/Back-end/Django)
+  - Django 개념
+  - Django Model
+  - Django User
+  - Django ModelForm
+  - Django Admin
+  - SQL with Django ORM
+  - Django Rest Framework
+  - Serializer
+  
 
 ### [Git](https://github.com/HerrineKim/TIL/tree/master/Git)
-
-- [GitHub 사용법](https://github.com/HerrineKim/TIL/blob/master/All%20about%20Git/GitHub.md)
-- [Git branch](https://github.com/HerrineKim/TIL/blob/master/All%20about%20Git/Git%20branch.md)
-  - [Git branch merge](https://github.com/HerrineKim/TIL/blob/master/All%20about%20Git/Git%20branch%20merge.md)
 
 ### [ETC](https://github.com/HerrineKim/TIL/tree/master/ETC)
 
 - [WebRTC](https://github.com/HerrineKim/TIL/tree/master/ETC/WebRTC)
-- Markdown 사용법
-- JWT
-
-
+- [Markdown 사용법](https://github.com/HerrineKim/TIL/tree/master/ETC/Markdown)
+- Cross-site request forgery(CSRF)
+- Cookie
 
