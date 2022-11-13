@@ -1,10 +1,12 @@
-### :books: TODAY I LEARNED
+# :books: TODAY I LEARNED
+
+### [My Blog:pen:](https://drspace.tistory.com/)
 
 ### [Daily-Records](https://github.com/HerrineKim/TIL/tree/master/Daily-Records) | 매일 배운 것들
 
 ### [Computer-Science](https://github.com/HerrineKim/TIL/tree/master/Computer-Science)
 
-- [운영체제](https://github.com/HerrineKim/TIL/tree/master/Computer-Science/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C(OS))
+- 운영체제
 - 네트워크
 
 ### [My-Projects](https://github.com/HerrineKim/TIL/tree/master/My-Projects) | 개인 프로젝트
