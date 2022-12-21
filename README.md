@@ -9,7 +9,7 @@
 - 운영체제
 - 네트워크
 
-### [My-Projects](https://github.com/HerrineKim/TIL/tree/master/My-Projects) | 개인 프로젝트
+### [My-Projects](https://github.com/HerrineKim/TIL/tree/master/My-Projects) | SSAFY에서 진행한 미니 프로젝트
 
 - [Django과 Vue를 이용한 미니 프로젝트](https://github.com/HerrineKim/TIL/tree/master/My-Projects/SSAFY)
   - PJT1: Python을 이용한 영화 데이터 수집
@@ -65,7 +65,10 @@
   - SQL with Django ORM
   - Django Rest Framework
   - Serializer
-  
+
+- Nest.js
+  - [Inflearn]탄탄한 백엔드 NestJS, 기초부터 심화까지
+
 
 ### [Git](https://github.com/HerrineKim/TIL/tree/master/Git)
 
