@@ -37,7 +37,7 @@ app.listen(8000, () => {
 })
 ```
 
-![image-20221223115613735](C:\Users\hyerin\AppData\Roaming\Typora\typora-user-images\image-20221223115613735.png)
+![image-20221223115613735](04-express-미들웨어-이해하기.assets/image-20221223115613735.png)
 
 
 

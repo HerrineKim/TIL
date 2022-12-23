@@ -45,7 +45,7 @@ app.listen(8000, () => {
 
 
 
-![image-20221223141959056](C:\Users\hyerin\AppData\Roaming\Typora\typora-user-images\image-20221223141959056.png)
+![image-20221223141959056](06-고양이-데이터-Create-Read-API-개발.assets/image-20221223141959056.png)
 
 ## READ 특정 고양이 데이터
 
@@ -73,7 +73,7 @@ app.get('/cats/:id', (req, res) => {
 })
 ```
 
-![image-20221223143613718](C:\Users\hyerin\AppData\Roaming\Typora\typora-user-images\image-20221223143613718.png)
+![image-20221223143613718](06-고양이-데이터-Create-Read-API-개발.assets/image-20221223143613718.png)
 
 ## CREATE 고양이 데이터
 
@@ -107,4 +107,4 @@ app.post('/cats', (req, res) => {
 })
 ```
 
-![image-20221223144934811](C:\Users\hyerin\AppData\Roaming\Typora\typora-user-images\image-20221223144934811.png)
+![image-20221223144934811](06-고양이-데이터-Create-Read-API-개발.assets/image-20221223144934811.png)

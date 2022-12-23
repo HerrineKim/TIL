@@ -28,7 +28,7 @@ app.listen(port, () => console.log(`Example app listening on port http://localho
 
 
 
-![image-20221223112533088](C:\Users\hyerin\AppData\Roaming\Typora\typora-user-images\image-20221223112533088.png)
+![image-20221223112533088](02-Postman-설치.assets/image-20221223112533088.png)
 
 ## POST
 
@@ -38,4 +38,4 @@ app.post('/test', (req, res) => {
 })
 ```
 
-![image-20221223113112998](C:\Users\hyerin\AppData\Roaming\Typora\typora-user-images\image-20221223113112998.png)
+![image-20221223113112998](02-Postman-설치.assets/image-20221223113112998.png)

@@ -39,7 +39,7 @@
    - Window OS node 업데이트
 
      - [설치용 msi](https://nodejs.org/ko/download/) 다운 받아서 그냥 설치
-     - [![check](https://github.com/amamov/teaching-nestjs-a-to-z/raw/main/01%20%EC%B2%AB%20%EC%8B%9C%EC%9E%91/images/window.png)](https://github.com/amamov/teaching-nestjs-a-to-z/blob/main/01 첫 시작/images/window.png)
+     - [![check](02-Node-VSCode-설치-+-Prettier-셋업.assets/window.png)](https://github.com/amamov/teaching-nestjs-a-to-z/blob/main/01 첫 시작/images/window.png)
 
    - npm (JS 패키지 관리자) 업데이트
 
@@ -61,7 +61,7 @@
 
 ## VSCode
 
-[![vs](https://github.com/amamov/teaching-nestjs-a-to-z/raw/main/01%20%EC%B2%AB%20%EC%8B%9C%EC%9E%91/images/vscode.png)](https://github.com/amamov/teaching-nestjs-a-to-z/blob/main/01 첫 시작/images/vscode.png)
+[![vs](02-Node-VSCode-설치-+-Prettier-셋업.assets/vscode.png)](https://github.com/amamov/teaching-nestjs-a-to-z/blob/main/01 첫 시작/images/vscode.png)
 
 ## Webstorm에서 프로젝트 셋업
 
@@ -83,9 +83,9 @@
       - `$FilePathRelativeToProjectRoot$`
       - `$ProjectFileDir$`
 
-   ![img](https://github.com/amamov/teaching-nestjs-a-to-z/raw/main/01%20%EC%B2%AB%20%EC%8B%9C%EC%9E%91/images/prettier1.png)
+   ![img](02-Node-VSCode-설치-+-Prettier-셋업.assets/prettier1.png)
 
-   ![img](https://github.com/amamov/teaching-nestjs-a-to-z/raw/main/01%20%EC%B2%AB%20%EC%8B%9C%EC%9E%91/images/prettier2.png)
+   ![img](02-Node-VSCode-설치-+-Prettier-셋업.assets/prettier2.png)
 
 
 

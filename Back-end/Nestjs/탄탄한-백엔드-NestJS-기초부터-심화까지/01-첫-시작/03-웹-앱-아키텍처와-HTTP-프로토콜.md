@@ -14,5 +14,3 @@
 
 - http 프로토콜 자료 1 : https://developer.mozilla.org/ko/docs/Web/HTTP
 - http 프로토콜 자료 2 : https://developers.google.com/web/fundamentals/performance/http2
-
-# 

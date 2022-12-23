@@ -4,7 +4,7 @@
 
 # 새로운 폴더와 파일 만들기
 
-![image-20221223150323859](C:\Users\hyerin\AppData\Roaming\Typora\typora-user-images\image-20221223150323859.png)
+![image-20221223150323859](05-고양이-route-분리-모듈화.assets/image-20221223150323859.png)
 
 # Router 분리하기
 
