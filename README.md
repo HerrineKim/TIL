@@ -1,6 +1,6 @@
 # :books: TODAY I LEARNED
 
-### [My Blog:pen:](https://drspace.tistory.com/)
+### [Blog](https://drspace.tistory.com/)
 
 ### [Daily-Records](https://github.com/HerrineKim/TIL/tree/master/Daily-Records) | 매일 배운 것들
 
@@ -8,10 +8,11 @@
 
 - 운영체제
 - 네트워크
+- 컴퓨터 구조
 
-### [My-Projects](https://github.com/HerrineKim/TIL/tree/master/My-Projects) | SSAFY에서 진행한 미니 프로젝트
+### [My-Projects](https://github.com/HerrineKim/TIL/tree/master/My-Projects) 
 
-- [Django과 Vue를 이용한 미니 프로젝트](https://github.com/HerrineKim/TIL/tree/master/My-Projects/SSAFY)
+- [[SSAFY]Django과 Vue를 이용한 미니 프로젝트](https://github.com/HerrineKim/TIL/tree/master/My-Projects/SSAFY)
   - PJT1: Python을 이용한 영화 데이터 수집
 
   - PJT2: JSON 형태의 영화 정보 조작하기
@@ -35,9 +36,8 @@
 
 ### [Front-end](https://github.com/HerrineKim/TIL/tree/master/Front-end) 
 
-- [Web](https://github.com/HerrineKim/TIL/tree/master/Front-end/Web)
-- [Javascript, Typescript](https://github.com/HerrineKim/TIL/tree/master/Front-end/JS-and-TS)
 - [CSS](https://github.com/HerrineKim/TIL/tree/master/Front-end/CSS)
+- [Javascript, Typescript](https://github.com/HerrineKim/TIL/tree/master/Front-end/JS-and-TS)
 - [React](https://github.com/HerrineKim/TIL/tree/master/Front-end/React)
   - [Inflearn]처음 만나는 리액트
   - [NomadCoders]ReactJS로 영화 웹 서비스 만들기
@@ -45,13 +45,16 @@
 - [React Native](https://github.com/HerrineKim/TIL/tree/master/Front-end/React-Native)
   - [YouTube]React-Native-Crash-Course
 - [Vue](https://github.com/HerrineKim/TIL/tree/master/Front-end/Vue)
+- [Web](https://github.com/HerrineKim/TIL/tree/master/Front-end/Web)
+  - DOM
+  - HTML
 
 ### Python
 
 ### [Algorithm](https://github.com/HerrineKim/TIL/tree/master/Algorithm)
 
 - [알고리즘 개념](https://github.com/HerrineKim/TIL/tree/master/Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B0%9C%EB%85%90)
-- [문제풀이 코드](https://github.com/HerrineKim/TIL/tree/master/Algorithm/Problem%20Solving%20codes)
+- [문제 풀이 코드](https://github.com/HerrineKim/TIL/tree/master/Algorithm/Problem%20Solving%20codes)
 
 ### [Back-end](https://github.com/HerrineKim/TIL/tree/master/Back-end)
 
@@ -66,7 +69,7 @@
   - Django Rest Framework
   - Serializer
 
-- Nest.js
+- [Nest.js](https://github.com/HerrineKim/TIL/tree/master/Back-end/Nestjs)
   - [Inflearn]탄탄한 백엔드 NestJS, 기초부터 심화까지
 
 
