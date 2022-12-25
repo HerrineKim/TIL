@@ -32,16 +32,17 @@ class Server {
     })
   }
 
-
+  public listen() {
+    this.setMiddleware()
+    this.app.listen(8000, () => {
+      console.log('server is on...')
+    })
+  }
 }
 
-// app: 서버 역할, express의 인스턴스
-const app: express.Express = express()
-const port: number = 8000
+function init() {
+  const server = new Server()
+  server.listen()
+}
 
-
-// listen(): 서버를 실행하는 메서드
-// app.listen(port, () => console.log(`Example app listening on port http://localhost:${port}`))
-app.listen(8000, () => {
-  console.log('server is on...')
-})
+init()
