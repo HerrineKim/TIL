@@ -72,4 +72,57 @@ init()
 
 > `cats.service.ts`로 router에 있는 비즈니스 로직을 분리
 
+## 이런 패턴을 사용하는 이유
+
+1. 가독성을 높이고 유지 보수하기 좋도록 만들기 위해
+2. Nest.js에서 이와 같은 패턴을 사용하기 때문(온점을 사용하는 파일 명도 Nest.js 식이다.)
+
+## GET 예시
+
 **cats.service.ts**
+
+```typescript
+import {Request, Response} from 'express'
+import {Cat, CatType} from '../app.model'
+
+// * READ 고양이 전체 데이터 다 조회 -> GET
+export const readAllCat = (req: Request, res: Response) => {
+  try {
+    const cats = Cat;
+    // throw new Error('db connect error');
+    res.status(200).send({
+      success: true,
+      data: {
+        cats,
+      },
+    });
+  } catch (error: any) {
+    res.status(400).send({
+      success: false,
+      error: error.message,
+    })
+  }
+}
+...
+```
+
+**cats.route.ts**
+
+```typescript
+import {Cat, CatType} from '../app.model'
+import {Router} from 'express'
+import {readAllCat} from './cats.service'
+
+// 이 router 인스턴스에 라우팅을 쭉 추가해나가는 것
+const router = Router();
+
+// * READ 고양이 전체 데이터 다 조회 -> GET
+router.get('/cats', readAllCat)
+...
+```
+
+## 전체 수정
+
+
+
+이것이 express의 전부는 아니지만 Nest.js를 사용하기 위한 기본 개념들을 배웠다. 공식 문서에서 추가적인 내용을 공부해보면 좋다.
