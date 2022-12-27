@@ -29,6 +29,6 @@ export class CatsService {
       password: hashedPassword,
     });
     // 저장된 cat 객체를 리턴
-    return cat;
+    return cat.readOnlyData;
   }
 }

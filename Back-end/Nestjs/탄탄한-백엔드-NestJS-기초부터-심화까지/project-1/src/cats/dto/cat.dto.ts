@@ -1,7 +1,7 @@
+import { Cat } from '../cats.schema';
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator';
 
-export class CatRequestDto {
+export class ReadOnlyCatDto {
   @ApiProperty({
     example: 'hyerin@naver.com',
     description: 'email',
@@ -20,6 +20,11 @@ export class CatRequestDto {
   @IsNotEmpty()
   password: string;
 
+  @ApiProperty({
+    example: 'hyerin@naver.com',
+    description: 'email',
+    required: true,
+  })
   @IsString()
   @IsNotEmpty()
   name: string;

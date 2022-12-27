@@ -161,3 +161,52 @@ export class CatsService {
 ```
 
 ### 테스트
+
+![image-20221227170913855](04-회원-가입-서비스-개발-&-DTO-패턴.assets/image-20221227170913855.png)
+
+## 저장된 데이터 MongoDB에서 확인하기
+
+> MongoDB Compass 열기 > Databases > test > cats
+
+![image-20221227171350535](04-회원-가입-서비스-개발-&-DTO-패턴.assets/image-20221227171350535.png)
+
+## virtual field를 사용해 password가 그대로 노출되는 것을 막기 위해 schema 단계에서 숨기기
+
+> virtual field: 실제로 DB에 저장되는 필드는 아니지만, 비즈니스 로직에서 사용할 수 있는 필드
+
+### cats.schema.ts
+
+```typescript
+...
+  readonly readOnlyData: {
+    id: string;
+    email: string;
+    name: string;
+  };
+}
+
+export const CatSchema = SchemaFactory.createForClass(Cat);
+
+// return하고 싶은 것만 필터링하는 기능
+CatSchema.virtual('readOnlyData').get(function (this: Cat) {
+  return {
+    id: this.id,
+    email: this.email,
+    name: this.name,
+  };
+});
+```
+
+### cats.service.ts
+
+```typescript
+...
+	// 저장된 cat 객체를 리턴
+    return cat.readOnlyData;
+  }
+}
+```
+
+### 테스트
+
+![image-20221227172207462](04-회원-가입-서비스-개발-&-DTO-패턴.assets/image-20221227172207462.png)
