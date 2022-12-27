@@ -1,5 +1,7 @@
 # MongoDB 접근 권한 설정 & Compass 셋업
 
+[TOC]
+
 # cluster 설정하기
 
 ## IP 주소 추가

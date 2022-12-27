@@ -1,5 +1,7 @@
 # Node-VSCode-설치-+-Prettier-셋업
 
+[TOC]
+
 # dev settings by 강사님
 
 ## docs

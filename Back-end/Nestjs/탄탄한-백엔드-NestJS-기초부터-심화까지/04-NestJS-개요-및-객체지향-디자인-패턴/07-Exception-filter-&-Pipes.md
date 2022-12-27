@@ -1,5 +1,7 @@
 # Exception filter & Pipes
 
+[TOC]
+
 # Filter
 
 > 예외 처리 방법에 대해서 배운다.
@@ -199,12 +201,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
 # Pipes
 
-> [공식 문서]
->
-> 두 가지의 일반적인 사용 사례가 있다.
->
-> 1. 변환: 입력 데이터를 원하는 형식으로 변환(예: 문자열에서 정수로)
-> 2. 유효성 검사: 입력 데이터를 평가하고 유효하면 변경하지 않고 전달한다. 그렇지 않으면 데이터가 올바르지 않을 때 예외를 발생시킨다.
+> 클라이언트 요청에서 들어오는 데이터를 유효성 검사 및 변환을 수행하여 서버가 원하는 데이터를 얻을 수 있도록 도와주는 클래스
 
 ## param 타입 변환 및 유효성 검사 가능
 
@@ -232,3 +229,16 @@ export class HttpExceptionFilter implements ExceptionFilter {
 ![image-20221226175833854](07-Exception-filter-&-Pipes.assets/image-20221226175833854.png)
 
 *numeric string: numbers in string format
+
+
+
+## [보충] Pipe 패턴에 대하여
+
+https://docs.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters
+
+파이프는 단방향 통신을 위한 용도로 사용됩니다. 하나의 파이프는 이전 파이프에서 전달된 결과를 입력 값으로 받아 또 다른 결과 값을 내놓습니다. NestJS에서의 파이프는 클라이언트 요청에서 들어오는 데이터를 유효성 검사 및 변환을 수행하여 서버가 원하는 데이터를 얻을 수 있도록 도와주는 역할을 합니다.
+
+### 실습해보기
+
+![image-20221227095125598](07-Exception-filter-&-Pipes.assets/image-20221227095125598.png)
+
