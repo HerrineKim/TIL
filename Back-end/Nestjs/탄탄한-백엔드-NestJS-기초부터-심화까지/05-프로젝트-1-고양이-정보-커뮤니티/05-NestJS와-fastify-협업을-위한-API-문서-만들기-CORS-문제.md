@@ -136,6 +136,60 @@ export class CatRequestDto {
 
 ## 마지막으로, Controller에서 Swagger Response 형태 지정해주기
 
+### cats.dto.ts라는 새로운 dto 생성하고, readOnlyData를 받아 검증한다. 해당 DTO를 controller의 @ApiResponse 데코레이터 안에 넣어 주기
+
 ```typescript
+  @ApiResponse({
+    status: 200,
+    description: '성공!',
+  })
+  @ApiResponse({
+    status: 500,
+    description: '서버 에러!',
+    type: ReadOnlyCatDto,
+  })
+  @ApiOperation({ summary: '고양이 회원가입' })
+  @Post()
+  async signUp(@Body() body: CatRequestDto) {
+    return await this.catsService.signUp(body);
+  }
+
 ```
 
+```typescript
+import { ApiProperty } from '@nestjs/swagger';
+
+export class ReadOnlyCatDto {
+  @ApiProperty({
+    example: '12',
+    description: 'id',
+    required: true,
+  })
+  id: string;
+
+  @ApiProperty({
+    example: 'hyerin@naver.com',
+    description: 'email',
+    required: true,
+  })
+  email: string;
+
+  @ApiProperty({
+    example: 'hyerin',
+    description: 'name',
+    required: true,
+  })
+  name: string;
+}
+
+```
+
+### 확인
+
+![image-20221228165751674](05-NestJS와-fastify-협업을-위한-API-문서-만들기-CORS-문제.assets/image-20221228165751674.png)
+
+
+
+# 상속 개념을 사용해 DTO 재사용성 있도록 살려서 만들기
+
+## Cat 상속 받기

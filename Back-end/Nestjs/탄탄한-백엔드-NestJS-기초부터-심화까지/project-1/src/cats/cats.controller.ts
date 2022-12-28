@@ -5,6 +5,7 @@ import { SuccessInterceptor } from 'src/common/interceptors/success.interceptor'
 import { CatsService } from './cats.service';
 import { CatRequestDto } from './dto/cats.request.dto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { ReadOnlyCatDto } from './dto/cat.dto';
 
 @Controller('cats')
 @UseInterceptors(SuccessInterceptor)
@@ -25,6 +26,7 @@ export class CatsController {
   @ApiResponse({
     status: 500,
     description: '서버 에러!',
+    type: ReadOnlyCatDto,
   })
   @ApiOperation({ summary: '고양이 회원가입' })
   @Post()
