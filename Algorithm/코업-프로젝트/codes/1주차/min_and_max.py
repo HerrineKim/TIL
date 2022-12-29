@@ -1,3 +1,4 @@
+# Title: 최댓값과 최솟값
 def solution(s):
     s_list = list(map(int, s.split()))
     max_v = s_list[0]
