@@ -17,6 +17,12 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   // docs: Swagger API의 endpoint
   SwaggerModule.setup('docs', app, document);
+  // CORS 설정
+  app.enableCors({
+    // 어떤 FE 웹사이트라도 접근 가능. 나중에는 특정 URL을 쓰는 것을 권장한다.
+    origin: true,
+    credentials: true,
+  });
   const PORT = process.env.PORT;
   await app.listen(PORT);
 }

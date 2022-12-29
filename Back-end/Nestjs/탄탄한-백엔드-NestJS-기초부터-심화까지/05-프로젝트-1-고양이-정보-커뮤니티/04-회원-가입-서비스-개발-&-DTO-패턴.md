@@ -4,6 +4,8 @@
 
 
 
+![스크린샷 2021-08-26 오전 11.27.04](04-회원-가입-서비스-개발-&-DTO-패턴.assets/스크린샷 2021-08-26 오전 11.27.04.png)
+
 # 회원 가입 시 입력 필드를 검증해 줄 DTO(Data Transer Object) 패턴
 
 > 클라이언트에서 바디에 실어서 데이터를 보냈을 때, DTO 객체로 만들어서 validation 과정을 거쳐 controller로, controller에서 그 객체를 service로, service가 DB로 보내는 방식이다.
