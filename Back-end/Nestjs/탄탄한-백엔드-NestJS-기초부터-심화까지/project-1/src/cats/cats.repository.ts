@@ -7,6 +7,15 @@ import { CatRequestDto } from './dto/cats.request.dto';
 @Injectable()
 export class CatsRepository {
   constructor(@InjectModel(Cat.name) private readonly catModel: Model<Cat>) {}
+  async findCatByIdWithoutPassword(catId: string): Promise<Cat | null> {
+    const cat = await this.catModel.findById(catId).select('-password');
+    return cat;
+  }
+
+  async findCatByEmail(email: string): Promise<Cat | null> {
+    const cat = await this.catModel.findOne({ email });
+    return cat;
+  }
   // Service에서 구현했던 isCatExist 함수와 같은 함수를 만들기
   async existsByEmail(email: string): Promise<boolean> {
     try {
