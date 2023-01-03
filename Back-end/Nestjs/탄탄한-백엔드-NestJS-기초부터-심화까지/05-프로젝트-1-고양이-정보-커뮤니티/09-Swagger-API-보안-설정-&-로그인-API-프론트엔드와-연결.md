@@ -44,3 +44,42 @@ async function bootstrap() {
 
 ![image-20230103144134309](09-Swagger-API-보안-설정-&-로그인-API-프론트엔드와-연결.assets/image-20230103144134309.png)
 
+## 4. MODE와 JWT_SECRET 설정
+
+![image-20230103172526666](09-Swagger-API-보안-설정-&-로그인-API-프론트엔드와-연결.assets/image-20230103172526666.png)
+
+### auth.module.ts
+
+```typescript
+      secret: process.env.JWT_SECRET,
+```
+
+### jwt.strategy.ts
+
+```typescript
+      secretOrKey: process.env.JWT_SECRET,
+```
+
+## 5. 모듈에서 환경 변수 사용이 가능하도록 설정
+
+### auth.module.ts
+
+```typescript
+import { ConfigModule } from '@nestjs/config';
+
+@Module({
+  imports: [
+    ConfigModule.forRoot(),
+```
+
+## 6. 테스트
+
+![image-20230103173348872](09-Swagger-API-보안-설정-&-로그인-API-프론트엔드와-연결.assets/image-20230103173348872.png)
+
+![image-20230103173358004](09-Swagger-API-보안-설정-&-로그인-API-프론트엔드와-연결.assets/image-20230103173358004.png)
+
+
+
+# 로그인 API 연결
+
+![image-20230103173443592](09-Swagger-API-보안-설정-&-로그인-API-프론트엔드와-연결.assets/image-20230103173443592.png)

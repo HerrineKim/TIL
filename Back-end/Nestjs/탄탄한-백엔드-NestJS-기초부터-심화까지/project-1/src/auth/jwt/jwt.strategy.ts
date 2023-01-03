@@ -13,7 +13,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
       // 토큰 만료 시간이 있음
       ignoreExpiration: false,
       // 추후 환경변수로 설정
-      secretOrKey: 'secret',
+      secretOrKey: process.env.JWT_SECRET,
     });
   }
 
