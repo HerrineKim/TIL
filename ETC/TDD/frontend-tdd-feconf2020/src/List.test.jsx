@@ -16,5 +16,7 @@ describe('List', () => {
     expect(container).toHaveTextContent('점심 메뉴 고민하기');
     expect(container).toHaveTextContent('고양이 사진 보기');
     // 두 개의 리스트 요소를 모두 작성했으면 최종적으로 App.jsx에 List를 사용할 수 있도록 import 해주러 가자.
+
+    // 
   });
 });

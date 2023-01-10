@@ -16,4 +16,4 @@ describe('ListContainer', () => {
     ))
     expect(container).toHaveTextContent('고양이 사진 보기')
   })
-}) 
+})
