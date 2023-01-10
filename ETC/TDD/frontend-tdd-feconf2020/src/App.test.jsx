@@ -3,11 +3,14 @@ import { useSelector } from 'react-redux';
 import { render } from '@testing-library/react';
 import App from './App';
 import tasks from '../fixtures/tasks';
+import { useDispatch } from '../__mocks__/react-redux';
 
 jest.mock('react-redux');
 
 // Import해 온 App 컴포넌트를 대상으로 어떤 컴포넌트를 사용할 지 작성한다.
 describe('App', () => {
+  const dispatch = jest.fn()
+  useDispatch.mockImplementation(() => dispatch)
   useSelector.mockImplementation((selector) => selector({
     tasks,
   }))

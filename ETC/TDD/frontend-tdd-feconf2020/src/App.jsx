@@ -1,7 +1,17 @@
-import React from 'react';
-import ListContainer from './ListContainer';
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import ListContainer from './ListContainer'
+import { setTasks } from './actions'
+import tasks from '../fixtures/tasks'
+
 
 export default function App() {
+  // 액션 보내주기, 그 전에 액션 구현하기
+  const dispatch = useDispatch()
+  // 앱 컴포넌트가 그려질 때 초기 데이터를 그려주기
+  useEffect(() => {
+    dispatch(setTasks(tasks))
+  }, [])
   // 데이터도 여기로 가져와서 직접 전달해준다.
   return (
     <div>
