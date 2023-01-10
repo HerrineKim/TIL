@@ -1,12 +1,8 @@
 import React from 'react';
-import List from './List';
+import ListContainer from './ListContainer';
 
 export default function App() {
   // 데이터도 여기로 가져와서 직접 전달해준다.
-  const tasks = [
-    { id: 1, title: '점심 메뉴 고민하기'},
-    { id: 2, title: '고양이 사진 보기'},
-  ]
   return (
     <div>
       <h1>To-do</h1>
@@ -16,7 +12,8 @@ export default function App() {
       </ul> */}
       {/* 하지만 TDD의 원칙 중 하나인 관심사의 분리에 따라 list에 대한 관심은 list 컴포넌트로 분리하자. */}
       {/* List와 List.test 컴포넌트 두 개를 생성한다. */}
-      <List tasks={tasks} />
+      {/* <List tasks={tasks} /> */}
+      <ListContainer />
     </div>
   );
 }
