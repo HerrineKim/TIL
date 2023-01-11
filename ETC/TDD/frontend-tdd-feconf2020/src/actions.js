@@ -6,3 +6,12 @@ export function setTasks(tasks) {
     },
   };
 }
+
+export function deleteTask(id) {
+  return {
+    type: 'deleteTask',
+    payload: {
+      id,
+    },
+  };
+}
