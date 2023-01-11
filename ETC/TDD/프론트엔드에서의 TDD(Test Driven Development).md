@@ -14,7 +14,7 @@
 
 - [한글 정리본](https://www.rinae.dev/posts/tdd-by-example-summary)
 
-클린 코드(도서)
+클린 코드 9장(도서)
 
 TDD는 설계 방법론이 아니다(강남언니 CTO 이규원님 블로그)
 
@@ -22,7 +22,9 @@ TDD는 설계 방법론이 아니다(강남언니 CTO 이규원님 블로그)
 
 ["TDD는 버그를 없애주나요?" 테스트주도개발에 대한 편견과 오해 바로잡기](https://fastcampus.co.kr/story_article_tdd)(패스트캠퍼스)
 
-[프론트엔드 개발자의 TDD 적응하기](https://blog.wadiz.kr/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-tdd-%EC%A0%81%EC%9D%91%ED%95%98%EA%B8%B0/)(와디즈 FE개발팀 홍전일)
+[프론트엔드 개발자의 TDD 적응하기](https://blog.wadiz.kr/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%9D%98-tdd-%EC%A0%81%EC%9D%91%ED%95%98%EA%B8%B0/)(와디즈 FE 개발팀 홍전일)
+
+[Kent Beck의 테스트 주도 개발 책을 읽고.](Kent Beck의 테스트 주도 개발 책을 읽고.)(Google Firebase Daniel Lee)
 
 
 
@@ -34,7 +36,7 @@ TDD는 설계 방법론이 아니다(강남언니 CTO 이규원님 블로그)
 
 왜 안 하는가? - 이유는 뻔하다. 힘들고, 일정에 치인다. 나중에 나중에 하다가 나중은 절대 오지 않는다. 동질감 자극
 
-그렇지만 TDD에 대해 강조하고 싶다.
+그렇지만 TDD에 대해 강조하고 싶다. 
 
 TDD는 켄트 백이라는 사람이 TDD라는 책에서 잘 정리했고, 여기서 주요 개념들이 많이 나온다.
 
@@ -48,7 +50,7 @@ TDD의 사이클을 보면 간단해 보인다. 하지만 어렵다.
 
 왜? 코드 자체가 테스터블한 코드가 아니기 때문
 
-어떻게? '관심사의 분리'를 통해 테스터블한 코드를 만들자.
+어떻게? '관심사의 분리' 를 통해 테스터블한 코드를 만들자.
 
 - 자신이 관심 갖는 부분에만 관심을 기울이는 소프트웨어 엔지니어링의 원칙
 
@@ -68,7 +70,7 @@ React의 관심사 때문이다. React의 관심사는 상태의 반영이다. S
 
 Redux 문서를 보면 Presentational Components, Container Components로 구분해 상태는 Container Components에서만 가져오고 그걸 Presentational에 보여 준다고 한다.
 
-이렇게 책임을 분리하고 특정 컴포넌트의 책임에 집중하면, Single Responsibility Principle을 자연스럽게 지키게 된다. 불필요한 의존성이 줄어들도록 해야 테스트도 원활하게 진행할 수 있기 때문이다.
+이렇게 책임을 분리하777고 특정 컴포넌트의 책임에 집중하면, Single Responsibility Principle을 자연스럽게 지키게 된다. 불필요한 의존성이 줄어들도록 해야 테스트도 원활하게 진행할 수 있기 때문이다.
 
 ~ Redux 패턴 실습 ~
 
@@ -81,7 +83,7 @@ Redux 문서를 보면 Presentational Components, Container Components로 구분
 
 [정리]
 
-TDD는 만능이 아니다
+~TDD는 만능이 아니다
 
 설계 방법론도 아니다
 
