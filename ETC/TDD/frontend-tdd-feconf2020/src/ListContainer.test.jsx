@@ -1,30 +1,48 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { fireEvent, render } from '@testing-library/react'
-import ListContainer from './ListContainer'
-import tasks from '../fixtures/tasks'
+import reducer from './reducer';
 
-jest.mock('react-redux')
+import {
+  setTasks,
+  deleteTask,
+} from './actions';
 
-describe('ListContainer', () => {
-  const dispatch = jest.fn()
-  useDispatch.mockImplementation(() => dispatch)
-  useSelector.mockImplementation((selector) => selector({
-    tasks,
-  }))
-  it('renders tasks', () => {
-    const { container, getAllByText } = render((
-      <ListContainer />
-    ))
-    expect(container).toHaveTextContent('고양이 사진 보기')
-    
-    const buttons = getAllByText('완료')
+import tasks from '../fixtures/tasks';
 
-    fireEvent.click(buttons[0])
+describe('reducer', () => {
+  describe('setTasks', () => {
+    it('changes tasks array', () => {
+      const initialState = {
+        tasks: [],
+      };
 
-    expect(dispatch).toBeCalledWith({
-      type: 'deleteTask',
-      payload: { id: 1 },
-    })
-  })
-})
+      const state = reducer(initialState, setTasks(tasks));
+
+      expect(state.tasks).not.toHaveLength(0);
+    });
+  });
+
+  describe('deleteTask', () => {
+    context('with existed task ID', () => {
+      it('remove the task from tasks', () => {
+        const state = reducer({
+          tasks: [
+            { id: 1, title: 'Task' },
+          ],
+        }, deleteTask(1));
+
+        expect(state.tasks).toHaveLength(0);
+      });
+    });
+
+    context('without existed task ID', () => {
+      it("doesn't work", () => {
+        const state = reducer({
+          tasks: [
+            { id: 1, title: 'Task' },
+          ],
+        }, deleteTask(100));
+
+        expect(state.tasks).toHaveLength(1);
+      });
+    });
+  });
+});

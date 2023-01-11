@@ -3,27 +3,24 @@
 // * tasks 객체를 props로 받아와서 map 함수를 사용해 요소를 그려준다.
 import React from 'react';
 
-export default function List({ tasks, onClick }) {
+import Item from './Item';
+
+export default function List({ tasks, onClickDelete }) {
   if (tasks.length === 0) {
     return (
-      <p>할 일이 없네!</p>
-    )
+      <p>할 일이 없어요!</p>
+    );
   }
-  return (
-      <ul>
-        {
-          tasks.map((task) => (
-            <li key={task.id}>
-              {task.title}
-              <button type='button' onClick={
-                () => onClick(task.id)
-              }>
-                완료
-              </button>
-            </li>
-          ))
-        }
 
-      </ul>
+  return (
+    <ol>
+      {tasks.map((task) => (
+        <Item
+          key={task.id}
+          task={task}
+          onClickDelete={onClickDelete}
+        />
+      ))}
+    </ol>
   );
 }

@@ -4,7 +4,7 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   if (action.type === 'setTasks') {
-    const { tasks } = action.payload
+    const { tasks } = action.payload;
     return {
       ...state,
       tasks,
@@ -12,10 +12,13 @@ export default function reducer(state = initialState, action) {
   }
 
   if (action.type === 'deleteTask') {
-    const { tasks } = state
+    const { tasks } = state;
+
     return {
       ...state,
       tasks: tasks.filter((task) => task.id !== action.payload.id),
     };
   }
+
+  return state;
 }
