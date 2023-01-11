@@ -7,20 +7,20 @@ import { useDispatch } from '../__mocks__/react-redux';
 
 jest.mock('react-redux');
 
-// * Import해 온 App 컴포넌트를 대상으로 어떤 컴포넌트를 사용할 지 작성한다.
+// Import해 온 App 컴포넌트를 대상으로 어떤 컴포넌트를 사용할 지 작성
 describe('App', () => {
   const dispatch = jest.fn()
   useDispatch.mockImplementation(() => dispatch)
   useSelector.mockImplementation((selector) => selector({
     tasks,
   }))
-  // * 할 일 목록을 렌더링 한다.
+  // 할 일 목록을 렌더링 한다.
   it('renders tasks', () => {
     // * render()로 앱을 그린 다음 container를 가져 온다.
     const { container } = render((
       <App />
     ));
-    // * 우리가 기대하는 것은 container 안에 '아무 일도 하기 싫다'라는 글자가 보이는 것이다.
+    // * 우리가 기대하는 것은 container 안에 '고양이 사진 보기'라는 글자가 보이는 것이다.
     expect(container).toHaveTextContent('고양이 사진 보기');
   });
 });
