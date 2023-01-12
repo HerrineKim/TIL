@@ -6,7 +6,7 @@ test('Item', () => {
   // 샘플 데이터
   const task = {
     id: 1,
-    title: '뭐라도 하기',
+    title: '고양이 사진 보기',
   };
   // 가짜 함수를 만들어주는 jest.fn()
   const handleClick = jest.fn();
@@ -18,7 +18,7 @@ test('Item', () => {
     />
   ));
 
-  expect(container).toHaveTextContent('뭐라도 하기');
+  expect(container).toHaveTextContent('고양이 사진 보기');
   expect(container).toHaveTextContent('완료');
   // toBeCalled(): 함수가 호출되는지 체크. 앞에 not을 붙여 호출되지 않아야 통과
   expect(handleClick).not.toBeCalled();

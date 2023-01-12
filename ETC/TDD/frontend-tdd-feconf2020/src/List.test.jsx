@@ -26,14 +26,14 @@ describe('List', () => {
   // * 행동 1: tasks 有
   context('with tasks', () => {
     const tasks = [
-      { id: 1, title: '할일 #1' },
-      { id: 2, title: '할일 #2' },
+      { id: 1, title: '고양이 사진 보기' },
+      { id: 2, title: '점심 메뉴 고민하기' },
     ];
 
     it('renders tasks', () => {
       const { getByText } = renderList(tasks);
       // toBeNull(): null인지 체크
-      expect(getByText(/할일 #2/)).not.toBeNull();
+      expect(getByText(/점심 메뉴 고민하기/)).not.toBeNull();
     });
 
     it('renders "완료" button to delete a task', () => {
