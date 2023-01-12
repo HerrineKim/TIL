@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-
 import { useDispatch } from 'react-redux';
-
 import ListContainer from './ListContainer';
 
 import {
@@ -9,7 +7,6 @@ import {
 } from './actions';
 
 export default function App() {
-  // 액션 보내주기
   const dispatch = useDispatch()
   // 앱 컴포넌트가 그려질 때 초기 데이터를 주기
   useEffect(() => {

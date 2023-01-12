@@ -3,6 +3,7 @@ import reducer from './reducer'
 import tasks from '../fixtures/tasks'
 
 describe('reducer', () => {
+  // 할 일 불러오기 함수
   describe('setTasks', () => {
     it('changes tasks array', () => {
       const state = reducer({
@@ -11,7 +12,7 @@ describe('reducer', () => {
       expect(state.tasks).not.toHaveLength(0)
     })
   })
-
+  // 할 일 '완료' 버튼 눌러 삭제하기 함수
   describe('deleteTask', () => {
     it('removes the task from tasks', () => {
       const state = reducer({
