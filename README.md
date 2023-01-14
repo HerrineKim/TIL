@@ -1,14 +1,14 @@
 # :books: TODAY I LEARNED
 
-### [Blog](https://drspace.tistory.com/)
+## [Blog](https://drspace.tistory.com/)
 
-### [Daily-Records](https://github.com/HerrineKim/TIL/tree/master/Daily-Records) | 매일 배운 것들
+## [Daily-Records](https://github.com/HerrineKim/TIL/tree/master/Daily-Records) | 매일 배운 것들
 
-### [Computer-Science](https://github.com/HerrineKim/TIL/tree/master/Computer-Science)
+## [Computer-Science(Notion)](https://riverwithyou.notion.site/CS-c50941a3f795459f9e6b4bcf498ee628)
 
-- 운영체제
-- 네트워크
-- 컴퓨터 구조
+- 운영체제(Notion)
+- 네트워크(Notion)
+- [컴퓨터 구조(Notion + Blog)](https://drspace.tistory.com/186)
 
 ### [My-Projects](https://github.com/HerrineKim/TIL/tree/master/My-Projects) 
 
@@ -48,6 +48,7 @@
 - [Web](https://github.com/HerrineKim/TIL/tree/master/Front-end/Web)
   - DOM
   - HTML
+  - SPA
 
 ### Python
 
@@ -56,7 +57,7 @@
 - [알고리즘 개념](https://github.com/HerrineKim/TIL/tree/master/Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EA%B0%9C%EB%85%90)
   - [알고리즘 스터디 '코업 프로젝트' with 코치님, 컨설턴트님]()
 
-- [문제 풀이 코드](https://github.com/HerrineKim/TIL/tree/master/Algorithm/Problem%20Solving%20codes)
+- [문제 풀이 코드(Repository)](https://github.com/HerrineKim/algorithm)
 
 ### [Back-end](https://github.com/HerrineKim/TIL/tree/master/Back-end)
 
@@ -74,9 +75,6 @@
 - [Nest.js](https://github.com/HerrineKim/TIL/tree/master/Back-end/Nestjs)
   - [Inflearn]탄탄한 백엔드 NestJS, 기초부터 심화까지
 
-
-### [Git](https://github.com/HerrineKim/TIL/tree/master/Git)
-
 ### [ETC](https://github.com/HerrineKim/TIL/tree/master/ETC)
 
 - [WebRTC](https://github.com/HerrineKim/TIL/tree/master/ETC/WebRTC)
@@ -84,3 +82,4 @@
 - Cross-site request forgery(CSRF)
 - Cookie
 - Regex
+- [Git](https://github.com/HerrineKim/TIL/tree/master/Git)
