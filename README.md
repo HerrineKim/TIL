@@ -82,4 +82,5 @@
 - Cross-site request forgery(CSRF)
 - Cookie
 - Regex
-- [Git](https://github.com/HerrineKim/TIL/tree/master/Git)
+- [Git](https://github.com/HerrineKim/TIL/tree/master/ETC/Git)
+
