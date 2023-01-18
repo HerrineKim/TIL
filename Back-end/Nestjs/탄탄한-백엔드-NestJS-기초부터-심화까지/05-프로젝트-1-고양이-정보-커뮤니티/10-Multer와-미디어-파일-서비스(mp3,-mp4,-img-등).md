@@ -30,7 +30,7 @@ $ npm i -D @types/multer
   @ApiOperation({ summary: '고양이 이미지 업로드' })
   @UseInterceptors(FileInterceptor('image'))
   @Post('upload/cats')
-  uploadCatImg(@UploadedFiles() files: Array<Express.Multer.File>) {
+  uploadCatImg(@UploadedFiles() image: Array<Express.Multer.File>) {
     console.log(files);
     return 'uploadImg';
   }
@@ -45,6 +45,7 @@ import { MulterModule } from '@nestjs/platform-express';
 @Module({
   imports: [
     MulterModule.register({
+      // dest: destination의 약자로, 어디에 저장할 지를 지정
       dest: './uploads',
     }),
     MongooseModule.forFeature([{ name: Cat.name, schema: CatSchema }]),
@@ -56,4 +57,15 @@ import { MulterModule } from '@nestjs/platform-express';
 })
 export class CatsModule {}
 ```
+
+## 4. 이미지 업로드 테스트(강사님 화면으로 시뮬레이션만 돌려 보기)
+
+## 5. 파일 업로드 시 /upload 폴더에 저장되도록 설정 해주기
+
+### 5-1. common /utils/multer.options.ts
+
+```typescript
+```
+
+
 

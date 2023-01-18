@@ -59,8 +59,8 @@ export class CatsController {
   @ApiOperation({ summary: '고양이 이미지 업로드' })
   @UseInterceptors(FileInterceptor('image'))
   @Post('upload/cats')
-  uploadCatImg(@UploadedFiles() files: Array<Express.Multer.File>) {
-    console.log(files);
+  uploadCatImg(@UploadedFiles() image: Array<Express.Multer.File>) {
+    console.log(image);
     return 'uploadImg';
   }
 }
