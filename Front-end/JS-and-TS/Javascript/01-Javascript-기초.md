@@ -628,7 +628,7 @@ for (const fruit of fruits) {
 
 # 01-6 함수
 
-## 함수 in JavaScript
+### 함수 in JavaScript
 
 - 참조 타입 중 하나로써 function 타입에 속함
 - JavaScript에서 함수를 정의하는 방법은 주로 2가지로 구분
@@ -642,7 +642,7 @@ for (const fruit of fruits) {
 
 
 
-## 함수 선언식(function statement, declaration)
+### 함수 선언식(function statement, declaration)
 
 ```javascript
 function name(args) {
@@ -664,7 +664,7 @@ add(1, 2)
 
 
 
-## 함수 표현식(function expression)
+### 함수 표현식(function expression)
 
 ```javascript
 const name = function (args) {
@@ -690,7 +690,7 @@ add(1, 2)
 
 
 
-## 기본 인자(default arguments)
+### 기본 인자(default arguments)
 
 - 인자 작성 시 '=' 문자 뒤 기본 인자 선언 가능
 
@@ -704,7 +704,7 @@ add(1, 2)
 
 
 
-## 매개 변수와 인자의 개수 불일치 허용
+### 매개 변수와 인자의 개수 불일치 허용
 
 - 매개변수보다 인자의 개수가 많을 경우,
 
@@ -725,12 +725,197 @@ add(1, 2)
 - 매개변수보다 인자의 개수가 적을 경우,
 
   ```javascript
+  const threeArgs = function (arg1, arg2, arg3) {
+      return [arg1, arg2, arg3]
+  }
   
+  threeArgs()  // [undefined, undefined, undefined]
+  threeArgs(1)  // [1, undefined, undefined]
+  threeArgs(1, 2)  // [1, 2, undefined]
   ```
-
   
 
-# 01-7 배열, 객체
+
+
+### Rest operator
+
+- **rest operator(...)**를 사용하면 함수가 정해지지 않은 수의 매개변수를 배열로 받음(python의 *args와 유사)
+  - 만약 rest operator로 처리한 매개변수에 인자가 넘어오지 않을 경우에는, 빈 배열로 처리
+
+```javascript
+const restOpr = function (arg1, arg2, ...restArgs) {
+    return [arg1, arg2, restArgs]
+}
+
+restArgs(1, 2, 3, 4, 5)  // [1, 2, [3, 4, 5]]
+restArgs(1, 2)  // [1, 2, []]
+```
+
+
+
+### Spread operator
+
+- **spread operator(...)**를 사용하면 배열 인자를 전개하여 전달 가능
+
+```javascript
+const spreadOpr = function (arg1, arg2, arg3) {
+    return arg1 + arg2 + arg3
+}
+
+const numbers = [1, 2, 3]
+spreadOpr(...numbers)  // 6
+```
+
+
+
+## 선언식 vs 표현식
+
+### 함수 선언식과 표현식 비교 정리
+
+- 공통점: 데이터 타입, 함수 구성 요소(이름, 매개변수, 몸통)
+- 차이점: 함수 선언식 - 익명 함수 불가능, 호이스팅 O, 함수 표현식 - 익명 함수 가능, 호이스팅 X, Airbnb 권장 방식
+
+
+
+### 함수의 타입
+
+- 선언식 함수와 표현식 함수 모두 타입은 function으로 동일
+
+
+
+### 호이스팅(hoisting) - 함수 선언식
+
+- 함수 선언식으로 선언한 함수는 var로 정의한 변수처럼 hoisting 발생
+- 함수 호출 이후에 선언 해도 동작
+
+```javascript
+add(2, 7)  // 9
+
+function add (num1, num2) {
+    return num1 + num2
+}
+```
+
+
+
+### 호이스팅(hoisting) - 함수 표현식
+
+- 반면 함수 표현식으로 선언한 함수는 함수 정의 전에 호출 시 에러 발생
+- 함수 표현식으로 정의된 함수는 변수로 평가되어 변수의 scope 규칙을 따름
+
+```javascript
+sub(7, 2)  // Uncaught ReferenceError: Cannot access 'sub' before initialization
+
+const sub = function (num1, num2) {
+    return num1 - num2
+}
+```
+
+
+
+## Arrow Function
+
+### 화살표 함수(Arrow Function)
+
+- 함수를 비교적 간결하게 정의할 수 있는 문법
+- function 키워드 생략 가능
+- 함수의 매개변수가 단 하나 뿐이라면, '()'도 생략 가능
+- 함수 몸통이 표현식 하나라면 '{}'와 return도 생략 가능
+- 기존 function 키워드 사용 방식과의 차이점은 후반부 this 키워드 학습 후 다시 보기
+
+
+
+## 문자열(string)
+
+### 문자열 관련 주요 메서드 목록
+
+| 메서드   | 설명                                      | 비고                                         |
+| -------- | ----------------------------------------- | -------------------------------------------- |
+| includes | 특정 문자열의 존재여부를 참/거짓으로 반환 |                                              |
+| split    | 문자열을 토큰 기준으로 나눈 배열 반환     | 인자가 없으면 기존 문자열을 배열에 담아 반환 |
+| replace  | 해당 문자열을 대상 문자열로 교체하여 반환 | replaceAll                                   |
+| trim     | 문자열의 좌우 공백 제거하여 반환          | trimStart, trimEnd                           |
+
+
+
+### 문자열 관련 주요 메서드 - includes
+
+- **string.includes(value)**
+  - 문자열에 value가 존재하는지 판별 후 참 또는 거짓 반환
+
+
+
+### 문자열 관련 주요 메서드 - split
+
+```javascript
+const str = 'a cup'
+
+str.split()  // ['a cup']
+str.split('')  // ['a', ' ', 'c', 'u', 'p']
+str.split(' ')  // ['a', 'cup']
+```
+
+- **string.split(value)**
+  - value가 없을 경우, 기존 문자열을 배열에 담아 반환
+  - value가 빈 문자열일 경우 각 문자로 나는 배열을 반환
+  - value가 기타 문자열일 경우, 해당 문자열로 나눈 배열을 반환
+
+
+
+### 문자열 관련 주요 메서드 - replace
+
+```javascript
+const str = 'a b c d'
+
+str.replace(' ', '-')  // 'a-b c d'
+str.replaceAll(' ', '-')  // 'a-b-c-d'
+```
+
+- **string.replace(from, to)**
+  - 문자열에 from 값이 존재할 경우, 1개만 to 값으로 교체하여 반환
+- **string.replaceAll(from, to)**
+  - 문자열에 from 값이 존재할 경우, 모두 to 값으로 교체하여 반환
+
+
+
+### 문자열 관련 주요 메서드 - trim
+
+```javascript
+const str = '    hello  '
+
+str.trim()  // 'hello'
+str.trimStart()  // 'hello  '
+str.trimEnd()  // '    hello'
+```
+
+- **string.trim()**
+  - 문자열 시작과 끝의 모든 공백 문자(스페이스, 탭, 엔터 등)를 제거한 문자열 반환
+- **string.trimStart()**
+  - 문자열 시작의 공백문자(스페이스, 탭, 엔터 등)를 제거한 문자열 반환
+- **string.trimEnd()**
+  - 문자열 끝의 공백문자(스페이스, 탭, 엔터 등)를 제거한 문자열 반환
+
+
+
+## 배열(Arrays)
+
+### 배열의 정의와 특징
+
+- 키와 속성들을 담고 있는 참조 타입의 객체(object)
+- 순서를 보장하는 특징이 있음
+- 주로 대괄호를 이용하여 생성하고, 0을 포함한 양의 정수 인덱스로 특정 값에 접근 가능
+- 배열의 길이는 array.length 형태로 접근
+  - (참고) 배열의 마지막 원소는 array.length -1로 접근
+
+
+
+### 배열 관련 주요 메서드 목록(1) - 기본편 (기본 배열 조작)
+
+- (참고) 
+
+
+
+# 01-8 배열, 객체
 
 # 01-8 this
 
