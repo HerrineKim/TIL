@@ -897,6 +897,8 @@ str.trimEnd()  // '    hello'
 
 
 
+# 01-8 배열, 객체
+
 ## 배열(Arrays)
 
 ### 배열의 정의와 특징
@@ -911,12 +913,326 @@ str.trimEnd()  // '    hello'
 
 ### 배열 관련 주요 메서드 목록(1) - 기본편 (기본 배열 조작)
 
-- (참고) 
+| 메서드          | 설명                                             | 비고                     |
+| --------------- | ------------------------------------------------ | ------------------------ |
+| reverse         | 원본 배열의 요소들의 순서를 반대로 정렬          |                          |
+| push & pop      | 배열의 가장 뒤에 요소를 추가 또는 제거           |                          |
+| unshift & shift | 배열의 가장 앞에 요소를 추가 또는 제거           |                          |
+| includes        | 배열에 특정 값이 존재하는지 판별 후 참/거짓 반환 |                          |
+| indexOf         | 배열에 특정 값이 존재하는지 판별 후 인덱스 반환  | 요소가 없을 경우 -1 반환 |
+| join            | 배열의 모든 요소를 구분자를 이용하여 연결        | 구분자 생략 시 쉼표 기준 |
 
 
 
-# 01-8 배열, 객체
+### 배열 관련 주요 메서드 - reverse
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+numbers.reverse()
+console.log(numbers)  // [5, 4, 3, 2, 1]
+```
+
+array.reverse()
+
+- 원본 배열의 요소들의 순서를 반대로 정렬
+
+
+
+### 배열 관련 주요 메서드 - push & pop
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+
+numbers.push(100)
+console.log(numbers)  // [1, 2, 3, 4, 5, 100]
+
+numbers.pop()
+console.log(numbers)  // [1, 2, 3, 4, 5]
+```
+
+array.push()
+
+- 배열의 가장 뒤에 요소 추가
+
+array.pop()
+
+- 배열의 마지막 요소 제거
+
+
+
+### 배열 관련 주요 메서드 - unshift & shift
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+
+numbers.unshift(100)
+console.log(numbers)  // [100, 1, 2, 3, 4, 5]
+
+numbers.shift()
+console.log(numbers)  // [1, 2, 3, 4, 5]
+```
+
+array.unshift()
+
+- 배열의 가장 앞에 요소 추가
+
+array.shift()
+
+- 배열의 첫번째 요소 제거
+
+
+
+### 배열 관련 주요 메서드 - includes
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+
+console.log(numbers.includes(1))  // true
+
+console.log(numbers.includes(100))  // false
+```
+
+array.includes(value)
+
+- 배열에 특정 값이 존재하는지 판별 후 참 또는 거짓 반환
+
+
+
+### 배열 관련 주요 메서드 - indexOf
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+let result
+
+result = numbers.indexOf(3)  // 2
+console.log(result)
+
+result = numbers.indexOf(100)  // -1
+console.log(result)
+```
+
+- 배열에 특정 값이 존재하는지 확인 후 가장 첫 번째로 찾은 요소의 인덱스 반환
+- 만약 해당 값이 없을 경우 -1 반환
+
+
+
+### 배열 관련 주요 메서드 - join
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+let result
+
+result = numbers.join('-')  // 1-2-3-4-5
+console.log(result)
+```
+
+- 배열의 모든 요소를 연결하여 반환
+- separator(구분자)는 선택적으로 지정 가능하며, 생략 시 쉼표를 기본 값으로 사용
+
+
+
+### Spread operator
+
+```javascript
+const array = [1, 2, 3]
+const newArray = [0, ...array, 4]
+
+console.log(newArray)  // [0, 1, 2, 3, 4]
+```
+
+- spread operator(...)를 사용하면 배열 내부에서 배열 전개 가능.
+- ES5까지는 Array.concat() 메서드를 사용.
+- 얕은 복사에 활용 가능.
+
+
+
+### 배열 관련 주요 메서드 목록 (2) - 심화편 (Array Helper Methods)
+
+- 배열을 순회하며 특정 로직을 수행하는 메서드
+- 메서드 호출 시 인자료 **callback 함수***를 받는 것이 특징
+  - callback 함수*: 어떤 함수의 내부에서 실행될 목적으로 인자로 넘겨받는 함수를 말함
+
+| 메서드  |                             설명                             |     비고     |
+| :-----: | :----------------------------------------------------------: | :----------: |
+| forEach |        배열의 각 요소에 대해 콜백 함수를 한 번씩 실행        | 반환 값 없음 |
+|   map   |      콜백 함수의 반환 값을 요소로 하는 새로운 배열 반환      |              |
+| filter  | 콜백 함수의 반환 값이 참인 요소들만 모아서 새로운 배열을 반환 |              |
+| reduce  |    콜백 함수의 반환 값들을 하나의 값(acc)에 누적 후 반환     |              |
+|  find   |        콜백 함수의 반환 값이 참이면 해당 요소를 반환         |              |
+|  some   |    배열의 요소 중 하나라도 판별 함수를 통과하면 참을 반환    |              |
+|  every  |      배열의 모든 요소가 판별 함수를 통과하면 참을 반환       |              |
+
+
+
+### 배열 관련 주요 메서드 - forEach
+
+`array.forEach(callback(element[, index[,array]]))`
+
+```javascript
+const fruits = ['딸기', '수박', '사과', '체리']
+
+fruits.forEach((fruit, index) => {
+    console.log(fruit, index)
+    // 딸기 0
+    // 수박 1
+    // 사과 2
+    // 체리 3
+})
+```
+
+- 배열의 각 요소에 대해 콜백 함수를 한 번씩 실행
+- 콜백 함수는 3가지 매개변수로 구성
+  - element: 배열의 요소
+  - index: 배열 요소의 인덱스
+  - array: 배열 자체
+- **반환 값(return)이 없는 메서드**
+
+
+
+### 배열 관련 주요 메서드 - map
+
+`array.map(callback(element[, index[, array]]))`
+
+```javascript
+array.map((element, index, array) => {
+    // do something
+})
+
+const numbers = [1, 2, 3, 4, 5]
+
+const doubleNums = numbers.map((num) => {
+    return num * 2
+})
+
+console.log(doubleNums)  // [2, 4, 6, 8, 10]
+```
+
+- 배열의 각 요소에 대해 콜백 함수를 한 번씩 실행
+- 콜백 함수의 반환 값을 요소를 하는 새로운 배열 반환
+- 기존 배열 전체를 다른 형태로 바꿀 때 유용
+
+
+
+### 배열 관련 주요 메서드 - filter
+
+`array.filter(callback(element[, index[, array]]))`
+
+```javascript
+array.filter((element, index, array) =>  {
+    // do something
+})
+
+const numbers = [1, 2, 3, 4, 5]
+
+const oddNums = numbers.filter((num, index) => {
+    return num % 2
+})
+
+console.log(oddNums)  // 1, 3, 5
+```
+
+- 배열의 각 요소에 대해 콜백 함수를 한 번씩 실행
+- **콜백 함수의 반환 값이 참인 요소들만** 모아서 새로운 배열을 반환
+- 기존 배열의 요소들을 필터링할 때 유용
+
+
+
+### 배열 관련 주요 메서드 - reduce
+
+`array.reduce(callback(acc, element, [index[, array]])[, initialValue])`
+
+```javascript
+const numbers = [1, 2, 3]
+
+const result = numbers.reduce((acc, num) => {
+    return acc + num
+}, 0)
+
+console.log(result)  // 6
+```
+
+- 배열의 각 요소에 대해 콜백 함수를 한 번씩 실행
+- 콜백 함수의 반환 값들을 하나의 값(acc)에 누적 후 반환
+- reduce 메서드의 주요 매개변수
+  - acc
+    - 이전 callback 함수의 반환 값이 누적되는 변수
+  - initialValue(optional)
+    - 최초 callback 함수 호출 시 acc에 할당되는 값, default 값은 배열의 첫 번째 값
+- (참고) 빈 배열의 경우 initialValue를 제공하지 않으면 에러 발생
+
+
+
+### 배열 관련 주요 메서드 - find
+
+`array.find(callback(element[, index[, array]]))`
+
+```javascript
+const avengers = [
+    { name: 'Tony Stark', age: 45 },
+    { name: 'Steve Rogers', age: 32 },
+    { name: 'Thor', age: 40 },
+]
+
+const result = avengers.find((avenger) => {
+    return avenger.name === 'Tony Stark'
+})
+
+console.log(result)  // { name: "Tony Stark", age: 45}
+```
+
+- 배열의 각 요소에 대해 콜백 함수를 한 번씩 실행
+- 콜백 함수의 반환 값이 참이면, 조건을 만족하는 첫번째 요소를 반환
+- 찾는 값이 배열에 없으면 undefined 반환
+
+
+
+### 배열 관련 주요 메서드 - some
+
+```javascript
+const numbers = [1, 3, 5, 7, 9]
+
+const hasEvenNumber = numbers.some((num) => {
+    return num % 2 === 0
+})
+console.log(hasEvenNumber)  // false
+
+const hadOddNumber = numbers.some((num) => {
+    return num % 2
+})
+console.log(hasOddNumber)  // true
+```
+
+- 배열의 요소 중 하나라도 주어진 판별 함수를 통과하면 참을 반환
+- 모든 요소가 통과하지 못하면 거짓 반환
+- (참고) 빈 배열은 항상 거짓 반환
+
+
+
+### 배열 관련 주요 메서드 - every
+
+- 배열의 모든 요소가 주어진 판별 함수를 통과하면 참을 반환
+- 하나의 요소라도 통과하지 못하면 거짓 반환
+- (참고) 빈 배열은 항상 참 반환
+
+
+
+## 객체(Objects)
+
+### 객체의 정의와 특징
+
+```javascript
+const me = {
+    name: 'jack',
+    phoneNUmber: '01012345678',
+    'samsung products': {
+        buds: 'Galaxy Buds pro',
+        galaxy: 'Galaxy s20',
+    },
+}
+```
+
+- 객체는 속성(property)의 집합이며, 중괄호 내부에 key와 value의 쌍으로 표현
+- key는 문자열 타입*만 가능 
 
 # 01-8 this
 
-]
