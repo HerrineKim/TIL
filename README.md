@@ -1,14 +1,14 @@
 # :books: TODAY I LEARNED
 
-## [Blog](https://drspace.tistory.com/)
+## [My Blog :heart:](https://drspace.tistory.com/)
 
 ## [Daily-Records](https://github.com/HerrineKim/TIL/tree/master/Daily-Records) | 매일 배운 것들
 
-## [Computer-Science(Notion)](https://riverwithyou.notion.site/CS-c50941a3f795459f9e6b4bcf498ee628)
+## [Computer-Science](https://riverwithyou.notion.site/CS-c50941a3f795459f9e6b4bcf498ee628)
 
-- 운영체제(Notion)
-- 네트워크(Notion)
-- [컴퓨터 구조(Notion + Blog)](https://drspace.tistory.com/186)
+- 운영체제
+- 네트워크
+- 컴퓨터 구조
 
 ### [My-Projects](https://github.com/HerrineKim/TIL/tree/master/My-Projects) 
 
@@ -46,9 +46,6 @@
   - [YouTube]React-Native-Crash-Course
 - [Vue](https://github.com/HerrineKim/TIL/tree/master/Front-end/Vue)
 - [Web](https://github.com/HerrineKim/TIL/tree/master/Front-end/Web)
-  - DOM
-  - HTML
-  - SPA
 
 ### Python
 
@@ -74,6 +71,7 @@
 
 - [Nest.js](https://github.com/HerrineKim/TIL/tree/master/Back-end/Nestjs)
   - [Inflearn]탄탄한 백엔드 NestJS, 기초부터 심화까지
+  - 
 
 ### [ETC](https://github.com/HerrineKim/TIL/tree/master/ETC)
 
@@ -83,4 +81,5 @@
 - Cookie
 - [Git](https://github.com/HerrineKim/TIL/tree/master/ETC/Git)
 - Regex
+- Networking
 - [TDD](https://github.com/HerrineKim/TIL/tree/master/ETC/TDD)
