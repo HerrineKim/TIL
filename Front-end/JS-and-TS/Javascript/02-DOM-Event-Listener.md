@@ -216,3 +216,14 @@ const secondLiTags = document.querySelectorAll('.ssafy-location')
   - 한 Node를 특정 부모 Node의 자식 NodeList 중 마지막 자식으로 삽입(Node만 추가 가능)
   - 한 번에 오직 하나의 Node만 추가할 수 있음
   - 만약 주어진 Node가 이미 문서에 존재하는 다른 Node를 참조한다면 새로운 위치로 이동
+
+
+
+### ParentNode.append() vs Node.appendChild()
+
+- append()를 사용하면 DOMString 객체를 추가할 수도 있지만, .appendChild()는 Node 객체만 허용
+- append()는 반환 값이 없지만, appendChild()는 추가된 Node 객체를 반환
+- append()는 여러 Node 객체와 문자열을 추가할 수 있지만, .appendChild()는 하나의 Node 객체만 추가할 수 있음
+
+
+
