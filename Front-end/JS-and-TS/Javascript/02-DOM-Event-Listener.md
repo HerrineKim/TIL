@@ -69,8 +69,10 @@
 
 - EventTarget
   - Event Listener를 가질 수 있는 객체가 구현하는 DOM 인터페이스
+  - root 'abstract' class, 근본 추상 클래스, 따라서 모든 DOM nodes는 'events'를 지원한다.
 - Node
   - 여러 가지 DOM 타입들이 상속하는 인터페이스
+  - 또한 추상 클래스, core tree 기능(parentNode, nextSibling, childNodes...)을 제공한다.
 - Element
   - Document 안의 모든 객체가 상속하는 가장 범용적인 인터페이스
   - 부모인 Node와 그 부모인 EventTarget의 속성을 상속
@@ -227,3 +229,113 @@ const secondLiTags = document.querySelectorAll('.ssafy-location')
 
 
 
+### DOM 변경 = 변경 관련 속성(property)
+
+- Node.innerText
+  - Node 객체와 그 자손의 텍스트 컨텐츠(DOMString)를 표현(해당 요소 내부의 raw text) (사람이 읽을 수 있는 요소만 남김)
+  - 즉, 줄바꿈을 인식하고 숨겨진 내용을 무시하는 등 최종적으로 스타일링이 적용된 모습으로 표현
+- Element.innerHTML
+  - 요소(element) 내에 포함된 HTML 마크업을 반환
+  - [참고] XSS 공격에 취약하므로 사용 시 주의
+
+
+
+### XSS(Cross-site Scripting)
+
+- 공격자가 입력 요소를 사용하여(<input>)  웹 사이트 클라이언트 코드 측 코드에 악성 스크립트를 삽입해 공격하는 방법
+- 피해자(사용자)의 브라우저가 악성 스크립트를 실행하며 공격자가 엑세스 제어를 우회하고 사용자를 가장할 수 있도록 함
+
+
+
+### DOM  삭제 - 삭제 관련 메서드
+
+- ChildNode.remove()
+  - Node가 속한 트리에서 해당 Node를 제거
+- Node.removeChild()
+  - DOM에서 자식 Node를 제거하고 제거된 Node를 반환
+  - Node는 인자로 들어가는 자식 Node의 부모 Node
+
+
+
+### DOM 속성 - 속성 관련 메서드
+
+- Element.setAttribute(name, value)
+  - 지정된 요소의 값을 설정
+  - 속성이 이미 존재하면 값을 갱신, 존재하지 않으면 지정된 이름과 값으로 새 속성을 추가
+- Element.getAttribute(attributeName)
+  - 해당 요소의 지정된 값(문자열)을 반환
+  - 인자(attributeName)는 값을 얻고자 하는 속성을 이름
+
+
+
+# Event
+
+## Event(이벤트) 개념
+
+- 네트워크 활동이나 사용자와의 상호작용 같은 사건의 발생을 알리기 위한 객체
+- 이벤트 발생
+  - 마우스를 클릭하거나 키보드를 누르는 등 사용자 행동으로 발생할 수도 있음
+  - 특정 메서드를 호출(Element.click())하여 프로그래밍적으로도 만들어낼 수 있음
+
+
+
+## Event 기반 인터페이스
+
+- AnimationEvent, ClipboardEvent, DragEvent 등
+- UIEvent
+  - 간단한 사용자 인터페이스 이벤트
+  - Event의 상속을 받음
+  - MouseEvent, KeyboardEvent, InputEvent, FocusEvent 등의 부모 객체 역할을 함
+
+
+
+## Event hanlder - addEventListener()
+
+### EventTarget.addEventListener()
+
+- 지정한 이벤트가 대상에 전달될 때마다 호출할 함수를 설정
+- 이벤트를 지원하는 모든 객체(Element, Document, Window 등)를 대상으로 지정 가능
+
+### target.addEventListener(type, listener[, options])
+
+- type
+  - 반응할 이벤트 유형(대소문자 구분 문자열)
+- listener
+  - 지정된 타입의 이벤트가 발생했을 때 알림을 받는 객체
+  - EventListener 인터페이스 혹은 JS function 객체(콜백 함수)여야 함
+
+### addEventListener 예시
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button">버튼</button>
+  
+  <script>
+    const btn = document.querySelector('button')
+    btn.addEventListener('click', function (event) {
+      alert('버튼이 클릭되었습니다.')
+      console.log(event)
+    })
+  </script>
+</body>
+</html>
+</html>
+```
+
+
+
+## Event 취소
+
+- event.preventDefault()
+- 현재 이벤트의 기본 동작을 중단
+- HTML 요소의 기본 동작을 작동하지 않게 막음
+  - ex) a 태그의 기본 동작은 클릭 시 링크로 이동 / form 태그의 기본 동작은 form 데이터 전송
+- 이벤트를 취소할 수 있는 경우, 이벤트의 전파를 막지 안혹 그 이벤트를 취소
