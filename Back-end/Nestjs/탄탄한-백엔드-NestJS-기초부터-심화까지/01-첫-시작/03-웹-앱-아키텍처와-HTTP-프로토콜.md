@@ -12,7 +12,7 @@
 
 웹에서는 규칙을 지키면서 요청을 보내야 한다. 그것이 HTTP 프로토콜이다.
 
-개발자 도구 네트워크 탭을 수많은 파일들이 있다. 이것들이 HTTP 프로토콜을 지켜 서버로부터 받아 온 것이다.
+개발자 도구 네트워크 탭을 보면 수많은 파일들이 있다. 이것들이 HTTP 프로토콜을 지켜 서버로부터 받아 온 것이다.
 
 - http 프로토콜 자료 1 : https://developer.mozilla.org/ko/docs/Web/HTTP
 - http 프로토콜 자료 2 : https://developers.google.com/web/fundamentals/performance/http2
