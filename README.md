@@ -9,6 +9,7 @@
 - 운영체제
 - 네트워크
 - 컴퓨터 구조
+- 객체지향 프로그래밍(C++)
 
 ### [My-Projects](https://github.com/HerrineKim/TIL/tree/master/My-Projects) 
 
