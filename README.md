@@ -1,6 +1,6 @@
 # :books: TODAY I LEARNED
 
-## [My Blog :heart:](https://drspace.tistory.com/)
+## [My Blog :heart:](https://riverkim.kr)
 
 ## [Daily-Records](https://github.com/HerrineKim/TIL/tree/master/Daily-Records) | 매일 배운 것들
 
