@@ -63,7 +63,7 @@
 
 ## VSCode
 
-[![vs](02-Node-VSCode-설치-+-Prettier-셋업.assets/vscode.png)](https://github.com/amamov/teaching-nestjs-a-to-z/blob/main/01 첫 시작/images/vscode.png)
+![vs](02-Node-VSCode-설치-+-Prettier-셋업.assets/vscode.png)(https://github.com/amamov/teaching-nestjs-a-to-z/blob/main/01 첫 시작/images/vscode.png)
 
 ## Webstorm에서 프로젝트 셋업
 
