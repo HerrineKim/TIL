@@ -18,12 +18,12 @@ interface Post {
 }
 
 // 엔드포인트 생성
-@Controller('post')
+@Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   // 중첩 엔드포인트 생성
-  @Get()
+  @Get('post')
   getPost(): Post {
     // json 형식으로 반환
     return {
